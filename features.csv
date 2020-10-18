@@ -1,0 +1,13 @@
+composer,title,date,avgNumVoices,keyTypes,sharpsOrFlats,tempo,timeSig,noteDensity,stringsP,keysP,woodwindsP,percussionP,spotifyID
+Adam de la Halle,Fi Maris de vostre Amour,None,3.0,minor,1,80.0,"[3, 4]",3.764705882352941,0.0,0.0,0.0,0,0XKQIVQ97pPTJg2uDEivD4
+"Bach, Johann Sebastian",Movement 1: Allemande,None,1.0,minor,1,94.0,"[4, 4]",6.822580645161289,0.0,0.0,0.0,0,2shAgoNd95hE6pAjAxxor7
+"Beethoven, Ludwig van",Piano Sonata no. 8 in C minor,None,1.5613793103448277,major,4,40.0,"[2, 4]",5.465753424657534,0.0,0.7352579852579852,0.0,0,4l5zWNPyET6PqBhxQEyKgt
+"Bononcini, Giovanni",For the love my heart doth prize,None,2.001897533206831,major,2,80.0,"[3, 4]",4.703108252947481,0.0,0.5942737430167597,0.0,0,2PhaOWw5VeChQCJcDBXpfD
+"Buxtehude, Dietrich","Sonata in A Minor, Op. 1, No. 3",None,2.3962264150943398,minor,0,72.0,"[4, 4]",3.785714285714285,0.42641509433962266,0.1660377358490566,0.0,0,3xBWKAOczzfaLalXRzxntl
+"Byrd, William",Ave verum corpus,None,3.26027397260274,minor,0,120.0,"[4, 4]",5.041666666666667,0.0,0.0,0.0,0,7J6b58JOnf4RGGqJmxq0bD
+"Chopin, Frederic",Scherzo in B-flat Minor,None,1.3542892536388975,major,7,300.0,"[3, 4]",10.089590443686005,0.0,0.7701074568544448,0.0,0,6OwavBgVS1N4lAXZ2zKUfc
+"Clementi, Muzio","Sonata No. 3 in C Major, Op. 36, Mvmt. 1",None,1.499194847020934,major,0,120.0,"[4, 4]",7.247058823529412,0.0,0.8825214899713467,0.0,0,5BdFatSoQfW6ttolc2vMcw
+"Dufay, Guillaume",O tres piteulx/Omnes amici,None,2.9083094555873927,major,4,110.00000000000001,"[3, 4]",4.027011494252873,0.0,0.0,0.0,0,7iQdTFJtemOPPiokQXyh2L
+"Dunstable, John","Hymn ""Veni Creator"" for Whitsunday",None,2.6303724928366763,major,1,120.0,"[3, 2]",3.8703703703703702,0.0,0.0,0.0,0,30UZB3neHQYL9nzCTBX33b
+"Faure, Gabriel","Apr&egrave;s un R&ecirc;ve, Op. 7, No. 1",None,1.183381088825215,minor,3,66.0,"[3, 4]",3.9615384615384617,0.0,0.28847771236333053,0.0,0,4PFahcJg4FDaRRxzKR3fYD
+"Flecha, Matheo",La bomba,None,3.096885813148789,major,1,120.0,"[4, 4]",6.066475174394748,0.0,0.0,0.0,0,3xDjFDrTbpR5XqgX2L82fs
