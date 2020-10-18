@@ -1,0 +1,127 @@
+CHEKSUMS for files from /users/craig/classical/beethoven/piano/sonata
+at https://kern.humdrum.org
+downloaded on Wed Oct 14 06:10:06 PDT 2020
+A current version of these files may be downloaded using the address:
+	https://kern.humdrum.org/data?f=zip&l=/users/craig/classical/beethoven/piano/sonata
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+3939872025 16210 sonata01-1.krn
+1408859262 13799 sonata01-2.krn
+3768917754 5969 sonata01-3.krn
+917892304 27706 sonata01-4.krn
+3815437827 31441 sonata02-1.krn
+2684556616 13944 sonata02-2.krn
+1041464642 6346 sonata02-3.krn
+381974341 33364 sonata02-4.krn
+1343639160 36139 sonata03-1.krn
+3531673340 16152 sonata03-2.krn
+3689563880 11869 sonata03-3.krn
+51140866 34898 sonata03-4.krn
+1539264911 37547 sonata04-1.krn
+958262569 14233 sonata04-2.krn
+2346715412 15822 sonata04-3.krn
+3453983654 37715 sonata04-4.krn
+557070191 26632 sonata05-1.krn
+3897527694 16692 sonata05-2.krn
+3576393036 18603 sonata05-3.krn
+3048219498 28547 sonata06-1.krn
+3556086076 14246 sonata06-2.krn
+871527890 18183 sonata06-3.krn
+2000314115 32057 sonata07-1.krn
+2399781191 21636 sonata07-2.krn
+1851463661 8106 sonata07-3.krn
+3965944436 23009 sonata07-4.krn
+2018816446 36645 sonata08-1.krn
+2297211935 18314 sonata08-2.krn
+4062953930 22900 sonata08-3.krn
+1405229644 25430 sonata09-1.krn
+4153273849 14159 sonata09-2.krn
+3515179471 19811 sonata09-3.krn
+4072210355 28469 sonata10-1.krn
+152100670 13015 sonata10-2.krn
+1380184029 24679 sonata10-3.krn
+197682149 38215 sonata11-1.krn
+862969664 20114 sonata11-2.krn
+3682868497 8860 sonata11-3.krn
+2821264726 39411 sonata11-4.krn
+1529851682 33131 sonata12-1.krn
+3664704420 7717 sonata12-2.krn
+295787784 16154 sonata12-3.krn
+3115058713 21190 sonata12-4.krn
+1142925226 15027 sonata13-1.krn
+131939881 10715 sonata13-2.krn
+3321428478 6731 sonata13-3.krn
+3264232850 34628 sonata13-4.krn
+3572761369 13507 sonata14-1.krn
+3786430422 4885 sonata14-2.krn
+3401879513 46597 sonata14-3.krn
+1593600739 40425 sonata15-1.krn
+1771734199 18036 sonata15-2.krn
+1484066403 6391 sonata15-3.krn
+858331168 25953 sonata15-4.krn
+2009060282 33868 sonata16-1.krn
+4144144649 36453 sonata16-2.krn
+1604832097 39620 sonata16-3.krn
+2613217503 29048 sonata17-1.krn
+2959485630 19434 sonata17-2.krn
+1823891877 42327 sonata17-3.krn
+3310312627 31261 sonata18-1.krn
+1722189935 24906 sonata18-2.krn
+858127686 8689 sonata18-3.krn
+3335830040 30761 sonata18-4.krn
+1748789962 11760 sonata19-1.krn
+3237663624 17942 sonata19-2.krn
+3691589327 14469 sonata20-1.krn
+689810869 11368 sonata20-2.krn
+3585951022 63581 sonata21-1.krn
+2178592822 5483 sonata21-2.krn
+760862211 74105 sonata21-3.krn
+542922092 14273 sonata21-4.krn
+1512577280 26540 sonata22-1.krn
+3661050607 25409 sonata22-2.krn
+554114239 72964 sonata23-1.krn
+3030159785 15488 sonata23-2.krn
+380233984 73325 sonata23-3.krn
+1344513659 20669 sonata24-1.krn
+4059764860 21949 sonata24-2.krn
+2566194016 18270 sonata25-1.krn
+2688936513 6614 sonata25-2.krn
+869731179 15305 sonata25-3.krn
+3225847768 26730 sonata26-1.krn
+3605184190 9284 sonata26-2.krn
+943533798 33711 sonata26-3.krn
+703547797 24845 sonata27-1.krn
+2753878986 37771 sonata27-2.krn
+3674276145 13118 sonata28-1.krn
+4098203939 16465 sonata28-2.krn
+1333821756 5677 sonata28-3.krn
+4056066315 42025 sonata28-4.krn
+1740419779 57310 sonata29-1.krn
+3188134409 20623 sonata29-2.krn
+1380084444 50775 sonata29-3.krn
+2843475686 74381 sonata29-4.krn
+1994858619 19989 sonata30-1.krn
+2243173597 16368 sonata30-2.krn
+2811254322 43730 sonata30-3.krn
+2897378640 28264 sonata31-1.krn
+2295425939 10245 sonata31-2.krn
+4222449104 38663 sonata31-3.krn
+2348800214 44622 sonata32-1.krn
+1030795393 62003 sonata32-2.krn

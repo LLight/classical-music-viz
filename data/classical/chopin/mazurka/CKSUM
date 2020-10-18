@@ -1,0 +1,76 @@
+CHEKSUMS for files from /users/craig/classical/chopin/mazurka
+at https://kern.humdrum.org
+downloaded on Wed Oct 14 06:10:06 PDT 2020
+A current version of these files may be downloaded using the address:
+	https://kern.humdrum.org/data?f=zip&l=/users/craig/classical/chopin/mazurka
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+1262745040 11049 mazurka-50.krn
+2385163493 12943 mazurka-51.krn
+862881090 15048 mazurka-52.krn
+3877106016 11193 mazurka06-1.krn
+686945620 9121 mazurka06-2.krn
+3009175493 9873 mazurka06-3.krn
+3235370355 3373 mazurka06-4.krn
+1600417121 7856 mazurka07-1.krn
+4166854369 6701 mazurka07-2.krn
+1250284121 12273 mazurka07-3.krn
+2458878839 6034 mazurka07-4.krn
+242424951 2631 mazurka07-5.krn
+1170775381 7689 mazurka17-1.krn
+2804606771 7858 mazurka17-2.krn
+401281838 9047 mazurka17-3.krn
+3465077901 13447 mazurka17-4.krn
+519966231 7980 mazurka24-1.krn
+1786061810 11218 mazurka24-2.krn
+2862572967 5311 mazurka24-3.krn
+2129177250 17643 mazurka24-4.krn
+3702041011 6037 mazurka30-1.krn
+1818885163 7810 mazurka30-2.krn
+3846452020 10554 mazurka30-3.krn
+4005054904 18648 mazurka30-4.krn
+452565610 5368 mazurka33-1.krn
+1327552118 16305 mazurka33-2.krn
+3218529533 5903 mazurka33-3.krn
+3066884435 20023 mazurka33-4.krn
+1802225964 16297 mazurka41-1.krn
+2206870275 8398 mazurka41-2.krn
+4006093964 8661 mazurka41-3.krn
+2195102882 8176 mazurka41-4.krn
+3868989554 11477 mazurka50-1.krn
+1498719924 10816 mazurka50-2.krn
+354413922 19429 mazurka50-3.krn
+2414723354 22970 mazurka56-1.krn
+2995613950 8555 mazurka56-2.krn
+2267489953 22622 mazurka56-3.krn
+2309542165 15421 mazurka59-1.krn
+2505499274 11079 mazurka59-2.krn
+1506102348 17391 mazurka59-3.krn
+1580565727 11117 mazurka63-1.krn
+1931590504 6041 mazurka63-2.krn
+1888573455 7512 mazurka63-3.krn
+4287607016 7923 mazurka67-1.krn
+1516525604 5981 mazurka67-2.krn
+109566108 7270 mazurka67-3.krn
+2616330941 8552 mazurka67-4.krn
+3352192261 9629 mazurka68-1.krn
+648314203 7491 mazurka68-2.krn
+164505623 6427 mazurka68-3.krn
+1451958040 4593 mazurka68-4.krn

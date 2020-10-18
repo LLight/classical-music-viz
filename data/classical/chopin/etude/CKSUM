@@ -1,0 +1,29 @@
+CHEKSUMS for files from /users/craig/classical/chopin/etude
+at https://kern.humdrum.org
+downloaded on Wed Oct 14 06:10:06 PDT 2020
+A current version of these files may be downloaded using the address:
+	https://kern.humdrum.org/data?f=zip&l=/users/craig/classical/chopin/etude
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+820863091 16850 etude10-02.krn
+1854008998 15097 etude10-02b.krn
+1744210161 23388 etude10-04.krn
+530032619 17826 etude10-05.krn
+1775919484 13975 etude10-09.krn
