@@ -1,13 +1,61 @@
-composer,title,date,avgNumVoices,keyTypes,sharpsOrFlats,tempo,timeSig,noteDensity,stringsP,keysP,woodwindsP,percussionP,spotifyID
-Adam de la Halle,Fi Maris de vostre Amour,None,3.0,minor,1,80.0,"[3, 4]",3.764705882352941,0.0,0.0,0.0,0,0XKQIVQ97pPTJg2uDEivD4
-"Bach, Johann Sebastian",Movement 1: Allemande,None,1.0,minor,1,94.0,"[4, 4]",6.822580645161289,0.0,0.0,0.0,0,2shAgoNd95hE6pAjAxxor7
-"Beethoven, Ludwig van",Piano Sonata no. 8 in C minor,None,1.5613793103448277,major,4,40.0,"[2, 4]",5.465753424657534,0.0,0.7352579852579852,0.0,0,4l5zWNPyET6PqBhxQEyKgt
-"Bononcini, Giovanni",For the love my heart doth prize,None,2.001897533206831,major,2,80.0,"[3, 4]",4.703108252947481,0.0,0.5942737430167597,0.0,0,2PhaOWw5VeChQCJcDBXpfD
-"Buxtehude, Dietrich","Sonata in A Minor, Op. 1, No. 3",None,2.3962264150943398,minor,0,72.0,"[4, 4]",3.785714285714285,0.42641509433962266,0.1660377358490566,0.0,0,3xBWKAOczzfaLalXRzxntl
-"Byrd, William",Ave verum corpus,None,3.26027397260274,minor,0,120.0,"[4, 4]",5.041666666666667,0.0,0.0,0.0,0,7J6b58JOnf4RGGqJmxq0bD
-"Chopin, Frederic",Scherzo in B-flat Minor,None,1.3542892536388975,major,7,300.0,"[3, 4]",10.089590443686005,0.0,0.7701074568544448,0.0,0,6OwavBgVS1N4lAXZ2zKUfc
-"Clementi, Muzio","Sonata No. 3 in C Major, Op. 36, Mvmt. 1",None,1.499194847020934,major,0,120.0,"[4, 4]",7.247058823529412,0.0,0.8825214899713467,0.0,0,5BdFatSoQfW6ttolc2vMcw
-"Dufay, Guillaume",O tres piteulx/Omnes amici,None,2.9083094555873927,major,4,110.00000000000001,"[3, 4]",4.027011494252873,0.0,0.0,0.0,0,7iQdTFJtemOPPiokQXyh2L
-"Dunstable, John","Hymn ""Veni Creator"" for Whitsunday",None,2.6303724928366763,major,1,120.0,"[3, 2]",3.8703703703703702,0.0,0.0,0.0,0,30UZB3neHQYL9nzCTBX33b
-"Faure, Gabriel","Apr&egrave;s un R&ecirc;ve, Op. 7, No. 1",None,1.183381088825215,minor,3,66.0,"[3, 4]",3.9615384615384617,0.0,0.28847771236333053,0.0,0,4PFahcJg4FDaRRxzKR3fYD
-"Flecha, Matheo",La bomba,None,3.096885813148789,major,1,120.0,"[4, 4]",6.066475174394748,0.0,0.0,0.0,0,3xDjFDrTbpR5XqgX2L82fs
+composer,title,date,avgNumVoices,keyTypes,sharpsOrFlats,tempo,timeSig,noteDensity
+Adam de la Halle,Fi Maris de vostre Amour,None,3.0,minor,1,80.0,"[3, 4]",3.764705882352941
+"Alkan, Charles-Valentin","Fa, Op. 38, No. 2",None,2.8795811518324608,minor,1,72.0,"[3, 8]",11.781818181818183
+"Bach, Johann Sebastian",Movement 1: Allemande,None,1.0,minor,1,94.0,"[4, 4]",6.822580645161289
+"Bach, Carl Philipp Emanuel",La Gause,None,1.6944444444444444,major,1,110.00000000000001,"[2, 4]",5.991071428571429
+"Beethoven, Ludwig van",Piano Sonata no. 8 in C minor,None,1.5613793103448277,major,4,40.0,"[2, 4]",5.465753424657534
+"Bononcini, Giovanni",For the love my heart doth prize,None,2.001897533206831,major,2,80.0,"[3, 4]",4.703108252947481
+"Brahms, Johannes","Waltz in E Major, Op.39 No.2",None,0.41935483870967744,major,4,172.0,"[3, 4]",6.652136752136752
+"Buxtehude, Dietrich","Sonata in A Minor, Op. 1, No. 3",None,2.3962264150943398,minor,0,72.0,"[4, 4]",3.785714285714285
+"Byrd, William",Ave verum corpus,None,3.26027397260274,minor,0,120.0,"[4, 4]",5.041666666666667
+"Chopin, Frederic",Scherzo in B-flat Minor,None,1.3542892536388975,major,7,300.0,"[3, 4]",10.089590443686005
+"Clementi, Muzio","Sonata No. 3 in C Major, Op. 36, Mvmt. 1",None,1.499194847020934,major,0,120.0,"[4, 4]",7.247058823529412
+"Dufay, Guillaume",O tres piteulx/Omnes amici,None,2.9083094555873927,major,4,110.00000000000001,"[3, 4]",4.027011494252873
+"Dunstable, John","Hymn ""Veni Creator"" for Whitsunday",None,2.6303724928366763,major,1,120.0,"[3, 2]",3.8703703703703702
+"Faure, Gabriel","Apres un Reve, Op. 7, No. 1",None,1.183381088825215,minor,3,66.0,"[3, 4]",3.9615384615384617
+"Flecha, Matheo",La bomba,None,3.096885813148789,major,1,120.0,"[4, 4]",6.066475174394748
+"Frescobaldi, Girolamo",No. 14: Canzon Terza &agrave; 2. Canto e Basso,None,2.6862745098039214,major,0,120.0,"[4, 4]",3.8844221105527637
+"Gabrieli, Giovanni",O magnum mysterium,None,5.177514792899408,minor,2,132.0,"[4, 4]",8.67153284671533
+"Gabrieli, Andrea",Ne confide,None,5.286919831223629,minor,0,120.0,"[4, 4]",6.611940298507463
+"Gibbons, Orlando",The Silver Swanne,None,4.492307692307692,major,1,160.0,"[4, 4]",11.047619047619047
+"Giovannelli, Ruggero",Suauissime Iesu,None,4.251141552511416,minor,2,120.0,"[4, 4]",6.372881355932203
+"Grieg, Edvard",In der Halle des Bergkonigs,None,1.5635036496350365,minor,2,138.0,"[4, 4]",7.576857142857143
+"Handel, George Frideric",Largo from Xerxes (Arranged),None,1.5169082125603865,major,1,60.0,"[3, 4]",2.621794871794872
+"Haydn, Franz Joseph",Sonata No. 33 in C minor,None,1.5080256821829856,minor,3,132.0,"[3, 4]",7.683076923076923
+"Haydn, Johann Michael",Menuet 1,None,3.9943181818181817,major,3,110.00000000000001,"[3, 4]",11.237654320987655
+"Hofmann, Heinrich",Rogue,None,1.4217687074829932,major,1,120.0,"[2, 4]",6.746268656716418
+"Hummel, Johann Nepomuk","Prelude in E-flat Minor, Op. 67, No. 14",None,0.8275862068965517,minor,6,120.0,"[2, 2]",3.357142857142857
+"Isaac, Henrich","Innsbruck, ich muss dich lassen",None,3.839080459770115,major,1,120.0,"[2, 2]",5.521739130434782
+"Ives, Charles",Spring Song,None,1.5859375,major,1,92.0,"[3, 4]",5.852417302798982
+Josquin Desprez,The Cricket,None,3.52755905511811,major,0,220.00000000000003,"[2, 2]",9.802222222222223
+"Landini, Francesco",Ecco la primavera,None,2.0,minor,1,80.0,"[3, 4]",2.7672955974842766
+"Lassus, Orlande de",Matona mia cara,None,3.770573566084788,major,1,156.0,"[2, 2]",7.0777777777777775
+"Liszt, Franz","Ballade No. 2 in B Minor, S. 171",None,1.1972762645914397,minor,2,144.0,"[6, 4]",6.149151046048907
+"MacDowell, Edward",Dance of Fantasy,None,1.2788959171937895,minor,4,152.0,"[2, 4]",10.595068571022525
+"Machaut, Guillaume de","With goodness, worth...",None,1.8596491228070176,minor,2,120.0,"[6, 8]",2.7916666666666665
+"Marenzio, Luca",Ergo ne vis abire,None,3.396551724137931,minor,1,120.0,"[4, 4]",3.642857142857143
+"Mendelssohn, Felix",Sonata in B-flat minor for piano in one movement,None,1.136513157894737,minor,5,40.0,"[4, 4]",4.42674253200569
+"Monteverdi, Claudio",Laudate Dominum omnes gentes,None,4.738382099827883,major,1,80.0,"[4, 4]",6.9093701996927805
+"Morales, Crist&oacute;bal de",,None,3.248322147651007,minor,2,240.0,"[2, 2]",10.0625
+"Morley, Thomas",April is in My Mistress' Face,None,3.1636363636363636,minor,2,120.0,"[2, 2]",4.473684210526316
+"Mozart, Wolfgang Amadeus",Sonatina in C-major,None,1.0789473684210527,major,0,64.0,"[4, 4]",1.964021164021164
+"Mussorgsky, Modest",Promenade,None,0.4530386740331492,major,2,120.0,"[5, 4]",4.561151079136691
+"Nanino, Giovanni Maria",Artifex mirus,None,3.8512396694214877,minor,1,120.0,"[4, 4]",5.230769230769231
+"Obrecht, Jacob",Parce Domine,None,3.073170731707317,minor,0,132.0,"[4, 4]",4.375555555555556
+"Pachelbel, Johann",Canon in D Major,None,4.015186915887851,major,2,60.0,"[4, 4]",9.933333333333334
+,Motet: Aucun - Lonc tans - Aunnuntiantes,None,2.607260726072607,major,0,80.0,"[3, 4]",3.146384479717813
+"Picchi, Giovanni","Canzona 1, part A",None,1.90978886756238,minor,0,120.0,"[4, 4]",2.4751552795031055
+"Prokofiev, Sergey",Visions fugitives,None,1.8120805369127517,major,0,80.0,"[4, 4]",2.9027777777777777
+"Ravel, Maurice",Sonatine pour le piano,None,1.3477088948787062,major,3,60.0,"[2, 4]",6.5609065155807365
+Rore,Sonno,None,3.463667820069204,minor,1,120.0,"[4, 2]",2.077956989247312
+"Scarlatti, Domenico","Sonata in D Major, K.478, L.12",None,1.3042944785276074,major,2,92.0,"[3, 4]",4.742222222222222
+"Schubert, Franz","String Quartet No. 10 in E-flat Major, Op. 125, No. 1",None,3.1946902654867255,major,3,200.0,"[2, 2]",11.445427728613568
+"Schumann, Robert",The Happy Farmer Comes Home,None,1.375,major,1,120.0,"[4, 4]",5.95
+"Scriabin, Alexander","Etude, Op. 8, No. 2",None,1.825242718446602,minor,2,92.0,"[4, 4]",10.659615384615385
+"Sinding, Christian",Fruhlingsrauschen,None,1.5091277890466532,major,7,100.0,"[2, 4]",12.304147465437788
+"Sousa, John Phillip",Hands Across the Sea,None,0.8010204081632653,major,2,160.0,"[2, 2]",4.9200283085633405
+,Reihentaenze Branlen,None,4.0,major,0,160.0,"[4, 4]",9.083333333333334
+"Vaqueiras, Raimbaut de",Neither May Day...,None,0.9594594594594594,major,0,144.0,"[6, 4]",2.195744680851064
+"Vecchi, Orazio",Veni in hortum,None,5.015686274509804,minor,1,120.0,"[4, 4]",8.008064516129032
+"Victoria, Thom&aacute; Luis de",Gloria,None,3.1600985221674875,minor,0,120.0,"[4, 4]",5.879598662207358
+"Webern, Anton von",Piano Variations,None,0.9230769230769231,major,2,160.0,"[2, 4]",4.385185185185185
