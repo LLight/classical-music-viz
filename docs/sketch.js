@@ -74,7 +74,7 @@ function draw(){
   if (frameCount==1) {
     nscores=fileList.length;
     for (i=0; i < fileList.length; i++){
-    scoreList.push(loadImage(fileList[i] + '.png'));
+    scoreList.push(loadImage('images' + fileList[i] + '.png'));
   }
     print ('nscores=',nscores);
     background(240);
