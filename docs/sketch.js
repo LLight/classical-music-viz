@@ -39,15 +39,15 @@ var selectedFile;
 var randomize=1;
 
 function preload(){
-  jsonurl='https://www.asdesigned.com/6310examples/proxy.php?url=https://raw.githubusercontent.com/LLight/classical-music-viz/main/features.json';
-  featureData=loadJSON(jsonurl);
-  
-  violin = loadImage('violin_solid.svg');
-  clarinet = loadImage('clarinet_solid.svg');
-  sax = loadImage('sax_solid.svg');
-  keyboard = loadImage('keys_solid.svg');
-  drum = loadImage('drum_solid.svg');
-  singer = loadImage('singer.svg');
+ //jsonurl='https://www.asdesigned.com/6310examples/proxy.php?url=https://raw.githubusercontent.com/LLight/classical-music-viz/main/features.json';
+  featureData=loadJSON('features.json');
+
+  violin = loadImage('images/violin_solid.svg');
+  clarinet = loadImage('images/clarinet_solid.svg');
+  sax = loadImage('images/sax_solid.svg');
+  keyboard = loadImage('images/keys_solid.svg');
+  drum = loadImage('images/drum_solid.svg');
+  singer = loadImage('images/singer.svg');
 
 }
 
@@ -67,9 +67,9 @@ function draw(){
 
  // console.log(featureData);
        [majorSlowColors, minorSlowColors, majorFastColors, minorFastColors]=defineColors();
-  
+
   textHeight=floor(windowHeight/40);
-  
+
   //intro page
   if (frameCount==1) {
     nscores=fileList.length;
@@ -117,7 +117,7 @@ function draw(){
    text('More notes per measure',2*width/3,5*height/6,width/4,textHeight*3);
    text('Click anywhere to display random pieces',width/2,height-textHeight);
    pop();
-    
+
    intro3();
   }
   //start the main part of the visualizations
@@ -128,7 +128,7 @@ function draw(){
     helpButton = createButton('?');
     helpButton.position(10, 10);
     helpButton.mouseOver(question);
-    
+
     if (randomize==1){
       randomSort();
     }
@@ -136,7 +136,7 @@ function draw(){
     outerHeightSmall=width/6;
     innerHeightBig=outerHeightBig/2;
     innerHeightSmall=outerHeightSmall/2;
-    
+
     for (let i=0; i<7; i++){
 
       if (frameCount>4 && i==0){
@@ -150,7 +150,7 @@ function draw(){
         newCenterPiece=randomNumList[0];
         console.log('i=',i,'randomPiece=',randomPiece,fileList[randomPiece]);
       }
-     
+
       if (i==0){
         img=scoreList[randomPiece];
         selectedFile=fileList[randomPiece]
@@ -160,14 +160,14 @@ function draw(){
       if (i==0){
         x=width/2;
         y=height/2;
-        
+
         drawViz(randomPiece, x, y, outerHeightBig, innerHeightBig, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,6);
        // pop();
         push();
         textSize(textHeight);
         textAlign(CENTER,CENTER);
         rectMode(CENTER);
-        fill(0);        
+        fill(0);
         text(composer, x-width/2, y-height/4, width/6, windowHeight/2);
         textStyle(ITALIC);
         text(title, x-width/2, y-height/8, width/7 , windowHeight/2);
@@ -193,7 +193,7 @@ function draw(){
     viewButton.mousePressed(() => showScore());
   }
 }
-  
+
 function intro1(){
   for (let i=0, x=width/4; i<3; i++,x+=width/4){
       randomPiece=randomNumList[i];
@@ -202,12 +202,12 @@ function intro1(){
      // console.log('timeSigNum='+timeSigNum);
      // console.log('nLines='+nLines);
       let y=height/2;
-      push();     
+      push();
       drawViz(randomPiece, x, y, width/5, width/10, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,4);
       pop();
     }
 }
-  
+
 function intro2(){
   //x and y axes
   let offset=width/8;
@@ -247,7 +247,7 @@ function intro3(){
   rect(midX,midY,outerHeight);
   fill(colorPalette[0]);
   fillShapes(midX,midY,outerHeight,2,4,4);
-  
+
   //time signature numerator=3 or 6: fill with triangles
   midX=width/3;
   midY=height/4;
@@ -255,7 +255,7 @@ function intro3(){
   rect(midX,midY,outerHeight);
   fill(colorPalette[0]);
   fillShapes(midX,midY,outerHeight,3,4,4);
-  
+
   //more notes per measure
   midX=2*width/3;
   midY=2*height/3;
@@ -263,7 +263,7 @@ function intro3(){
   rect(midX,midY,outerHeight);
   fill(colorPalette[0]);
   fillShapes(midX,midY,outerHeight,2,9,4);
-  
+
   //fewer notes per measure
   midX=width/3;
   midY=2*height/3;
@@ -279,14 +279,14 @@ function fillShapes(midX,midY,outerHeight,timeSigNum,nLines,shapeSize){
     for (i=1; i<=nLines; i++){
      //h=i*lineSpacing;
      x=round(midX-outerHeight/2+i*lineSpacing-lineSpacing/2);
-    
+
      if (timeSigNum==2 | timeSigNum==4){
        for (j=1; j<=nLines; j++){
          y=round(midY-outerHeight/2+j*lineSpacing-lineSpacing/2);
          rect(x,y,shapeSize,shapeSize);
        }
      }
-    
+
      else if (timeSigNum==3 | timeSigNum==6 | timeSigNum==5){
        for (j=1; j<=nLines; j++){
          y=round(midY-outerHeight/2+j*lineSpacing-lineSpacing/2);
@@ -297,7 +297,7 @@ function fillShapes(midX,midY,outerHeight,timeSigNum,nLines,shapeSize){
      }
    }
 }
-  
+
 function circles(xCenter,yCenter,colors,d){
   push();
   fill(colors[0]);
@@ -310,7 +310,7 @@ function circles(xCenter,yCenter,colors,d){
 function setParameters(randomPiece){
   nLines=nLinesList[randomPiece];
   timeSigNum=timeSigNumList[randomPiece];
-  colorPalette=setColors(randomPiece); 
+  colorPalette=setColors(randomPiece);
   composer=composerList[randomPiece];
   title=titleList[randomPiece];
   id=idList[randomPiece];
@@ -351,7 +351,7 @@ function pieceData (featureData) {
 }
 
 function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textHeight,colorPalette,strings,voice,percussion,woodwinds,keys,shapeSize){
-                 
+
   //outer shape
   push();
   strokeWeight(lineWeight);
@@ -360,8 +360,8 @@ function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textH
   rectMode(CENTER);
   rect(midX,midY,outerHeight);
   pop();
-  
-  push();  
+
+  push();
   if (nLines>=9){
     nLines=9;
   }
@@ -373,14 +373,14 @@ function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textH
     h=i*lineSpacing;
     fill(colorPalette[0]);
     x=round(midX-outerHeight/2+i*lineSpacing-lineSpacing/2);
-    
+
     if (timeSigNum==2 | timeSigNum==4){
       for (j=1; j<=nLines; j++){
         y=round(midY-outerHeight/2+j*lineSpacing-lineSpacing/2);
         rect(x,y,shapeSize,shapeSize);
       }
     }
-    
+
     else if (timeSigNum==3 | timeSigNum==6 | timeSigNum==5){
       for (j=1; j<=nLines; j++){
         y=round(midY-outerHeight/2+j*lineSpacing-lineSpacing/2);
@@ -391,8 +391,8 @@ function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textH
     }
   }
   pop();
-  
-  //inner shape 
+
+  //inner shape
   push();
   fill(colorPalette[0]);
   stroke(colorPalette[0]);
@@ -422,7 +422,7 @@ function defineColors(){
   var minorFastColors = [color(205,0,26),color(255,105,0)];
   return [majorSlowColors,minorSlowColors,majorFastColors,minorFastColors];
 }
-  
+
 //var colorPalette;
 function setColors(i){
   var colorPalette;
@@ -436,7 +436,7 @@ function setColors(i){
       colorPalette=majorFastColors;
     }
     else if (keyTypesList[i]  == 'minor' && tempoList[i]  >=100){
-      colorPalette=minorFastColors; 
+      colorPalette=minorFastColors;
     }
   return colorPalette;
 }
