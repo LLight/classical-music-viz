@@ -1,0 +1,98 @@
+[Message] Converting analytical markup...
+Output written to 02-fa_edited.svg.
+[Message] Converting analytical markup...
+Output written to 065-spring-song.svg.
+[Warning] 2 element(s) with a @plist could match the target
+Output written to L012K478.svg.
+[Warning] 2 element(s) with a @plist could match the target
+Output written to Wq117-37_edited.svg.
+Output written to annun.svg.
+Output written to apres.svg.
+Output written to april.svg.
+Output written to aveverum.svg.
+[Message] Converting analytical markup...
+Output written to ballade2_edited.svg.
+[Warning] 3 element(s) with a @plist could match the target
+Output written to bomba.svg.
+Output written to canon.svg.
+Output written to canzoni14.svg.
+Output written to coppini14.svg.
+Output written to coppini15.svg.
+Output written to coppini19.svg.
+Output written to coppini22.svg.
+Output written to coppini23.svg.
+Error on line: 6:
+   Data found before exclusive interpretation
+   LINE: *Ivox	*Ivox
+Output written to de_bonte_edited.svg.
+[Warning] 4 element(s) with a @plist could match the target
+Output written to echo.svg.
+Output written to etude8-02.svg.
+Output written to fimaris.svg.
+Output written to grillo.svg.
+[Warning] 2 element(s) with a @plist could match the target
+Output written to hands-sea.svg.
+Output written to innsbruck.svg.
+Output written to kalenda_maya.svg.
+Output written to largo.svg.
+[Message] Converting analytical markup...
+Output written to laudate.svg.
+Output written to matona_edited.svg.
+Error: Inconsistent rhythm analysis occurring near line 37
+Expected durationFromStart to be: 11 but found it to be 10
+Line: 4E\	.	2B/)	.	2g#/	.	(4cc#/	(4a\	.	(4cc#/	(4a\	.
+
+[Warning] 8 element(s) with a @plist could match the target
+Output written to menuet1_edited.svg.
+Output written to missa-quarti-toni_gloria_edited.svg.
+Output written to mysterium_edited.svg.
+Output written to omnes_amici.svg.
+Output written to op1-3-1.svg.
+[Message] Converting analytical markup...
+Output written to op14-5.svg.
+Output written to op39-02_edited.svg.
+Output written to op46-4_edited.svg.
+Output written to op68no10.svg.
+[Warning] 1 element(s) with a @plist could match the target
+Output written to parce_domine.svg.
+[Warning] 2 element(s) with a @plist could match the target
+Output written to partita2-1.svg.
+Output written to perlagloria.svg.
+Output written to prelude67-14.svg.
+Output written to promenade_edited.svg.
+[Message] Converting analytical markup...
+[Warning] 1 element(s) with a @plist could match the target
+Output written to quartet10-1.svg.
+[Warning] 1 element(s) with a @plist could match the target
+Output written to reihentaenze-07.svg.
+[Warning] 1 element(s) with a @plist could match the target
+Output written to schelm.svg.
+Error: Inconsistent rhythm analysis occurring near line 3080
+Expected durationFromStart to be: 1539 but found it to be 1537
+Line: 4e-\	(4eee-/	2bb-'\	.
+
+Output written to scherzo2.svg.
+[Warning] Justification is highly compressed (ratio smaller than 0.8: 0.101577)
+[Warning] 	System full width: 20000
+[Warning] 	Non-justifiable width: 3715
+[Warning] 	Drawing justifiable width: 160322
+Output written to score1Aa.svg.
+Output written to silverswan.svg.
+Output written to sonata08-2.svg.
+Output written to sonata1823_edited.svg.
+[Message] Converting analytical markup...
+[Warning] 2 element(s) with a @plist could match the target
+Output written to sonata33-3_edited.svg.
+Output written to sonatina-36-3-1.svg.
+Error: Inconsistent rhythm analysis occurring near line 925
+Expected durationFromStart to be: 687/4 but found it to be 172
+Line: 8r	2F#\ &(2c#\&)	8r	2a#\ 2cc#\ 2gg#\)	.
+
+Output written to sonatine-1.svg.
+Output written to sonno_edited.svg.
+Output written to spring.svg.
+[Warning] 2 element(s) with a @plist could match the target
+Output written to variations-2.svg.
+Output written to veni.svg.
+Output written to viennese6-3.svg.
+Output written to visions22-2_edited.svg.
