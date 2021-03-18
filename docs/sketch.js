@@ -351,7 +351,7 @@ function pieceData (featureData) {
     stringsList.push(featureData[i].strings);
     percussionList.push(featureData[i].percussion);
     fileList.push(featureData[i].filename);
-    midiFileList.push(featureData[i].)
+    midiFileList.push(featureData[i].midiFileName);
   }
 }
 
