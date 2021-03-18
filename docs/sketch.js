@@ -339,7 +339,7 @@ function randomSort(){
 
 function pieceData (featureData) {
   for (let i=0; i<59; i++){
-    keyTypesList.push(featureData[i].keyTypes);
+    keyTypesList.push(featureData[i].keyType);
     tempoList.push(featureData[i].tempo);
     timeSigNumList.push(featureData[i].timeSig[0]);
     composerList.push(featureData[i].composer);
