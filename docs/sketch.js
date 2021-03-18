@@ -40,6 +40,7 @@ var selectedFile;
 var randomize=1;
 var midiFile;
 var isPlaying=0;
+var playbackStarted=0;
 
 function preload(){
  //jsonurl='https://www.asdesigned.com/6310examples/proxy.php?url=https://raw.githubusercontent.com/LLight/classical-music-viz/main/features.json';
@@ -60,24 +61,37 @@ function setup() {
   background(240);
   noLoop();
   rectMode(CENTER);
+  nscores = Object.keys(featureData).length;
+  helpButton = createButton('?');
+  helpButton.position(10, 10);
+  helpButton.mouseOver(question);
+
+  playButton = createButton('Play MIDI');
+  playButton.position(3*width/4, height/2+height/8);
+  playButton.mousePressed(toggleMIDI);
+
+  viewButton = createButton('Preview Score');
+  viewButton.position(3*width/4, height/2-height/8);
+  viewButton.mousePressed(() => showScore());
 }
-
-
 
 function draw(){
   noLoop();
+
   pieceData(featureData);
 
- // console.log(featureData);
-       [majorSlowColors, minorSlowColors, majorFastColors, minorFastColors]=defineColors();
+  //console.log(featureData);
+  [majorSlowColors, minorSlowColors, majorFastColors, minorFastColors] = defineColors();
 
   textHeight=floor(windowHeight/40);
 
   //intro page
   if (frameCount==1) {
-    nscores=fileList.length;
+    //nscores=fileList.length;
     for (i=0; i < fileList.length; i++){
-    scoreList.push(loadImage('images/' + fileList[i] + '.png'));
+    scoreList.push(loadImage('images/' + fileList[i].split(".")[0] + '.png'));
+    playButton.hide();
+    viewButton.hide();
   }
     print ('nscores=',nscores);
     background(240);
@@ -104,6 +118,7 @@ function draw(){
    text('Color palettes',width/2,height/12);
    pop();
    intro2();
+   //playButton.hide();
   }
   //explain representations of time signature (shape) and note density (number of lines)
   else if (frameCount==3){
@@ -122,19 +137,30 @@ function draw(){
    pop();
 
    intro3();
+
+   //playButton.hide();
   }
   //start the main part of the visualizations
   //display random pieces with one currently selected shown larger in the middle
   //other random pieces are smaller at the top and bottom of the screen
   else  {
     background(240);
-    helpButton = createButton('?');
-    helpButton.position(10, 10);
-    helpButton.mouseOver(question);
+    //helpButton = createButton('?');
+    //helpButton.position(10, 10);
+    //helpButton.mouseOver(question);
+
+    //playButton = createButton('Play MIDI');
+    //playButton.position(3*width/4, height/2+height/8);
+    playButton.show();
+    viewButton.show();
 
     if (randomize==1){
       randomSort();
+      isPlaying=0;
+      playbackStarted=0;
+      MIDIjs.stop();
     }
+
     outerHeightBig=width/3;
     outerHeightSmall=width/6;
     innerHeightBig=outerHeightBig/2;
@@ -144,6 +170,7 @@ function draw(){
 
       if (frameCount>4 && i==0){
         randomPiece=newCenterPiece;
+        //midiFile=midiFileList[randomPiece];
         //console.log('center piece=',randomPiece,fileList[randomPiece]);
         //console.log(img);
         console.log('i=',i,'randomPiece=',randomPiece,fileList[randomPiece]);
@@ -159,6 +186,7 @@ function draw(){
         selectedFile=fileList[randomPiece];
         midiFile='midi/'+ midiFileList[randomPiece];
         console.log('new center piece=',newCenterPiece,selectedFile);
+        console.log('MIDI file=',midiFile);
       }
       setParameters(randomPiece);
       if (i==0){
@@ -189,9 +217,18 @@ function draw(){
         drawViz(randomPiece, x, y, outerHeightSmall, innerHeightSmall, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,4);
       }
     }
-    playButton = createButton('Play MIDI');
-    playButton.position(3*width/4, height/2+height/8);
-    playbutton.mousePressed(toggleMIDI);
+
+    if (isPlaying==1){
+      playButton.html("Pause");
+    }
+    else if (playbackStarted==1 & isPlaying==0){
+      playButton.html("Resume");
+    }
+    else if (playbackStarted==0){
+      playButton.html("Play MIDI");
+    }
+
+    //playButton.mousePressed(toggleMIDI);
     viewButton = createButton('Preview Score');
     viewButton.position(3*width/4, height/2-height/8);
    // viewButton.mousePressed(showScore());
@@ -327,9 +364,9 @@ function setParameters(randomPiece){
 }
 
 function randomSort(){
-  nPieces=60;
+  //nPieces=60;
   randomNumList=[];
-  for (let i=0; i<nPieces-1; i++){
+  for (let i=0; i < nscores - 1; i++){
     randomNumList.push(i);
   }
   //console.log('randomNumList length=',randomNumList.length);
@@ -338,14 +375,15 @@ function randomSort(){
 
 
 function pieceData (featureData) {
-  for (let i=0; i<59; i++){
+  for (let i=0; i< nscores - 1; i++){
+    //print(i);
     keyTypesList.push(featureData[i].keyType);
     tempoList.push(featureData[i].tempo);
     timeSigNumList.push(featureData[i].timeSig[0]);
     composerList.push(featureData[i].composer);
     titleList.push(featureData[i].title);
     nLinesList.push(floor(featureData[i].noteDensity));
-    idList.push(featureData[i].spotifyID);
+    //idList.push(featureData[i].spotifyID);
     keysList.push(featureData[i].keys);
     voiceList.push(featureData[i].voice);
     woodwindsList.push(featureData[i].woodwinds);
@@ -481,9 +519,9 @@ function question(){
 
 function showScore(){
   background(255);
-  viewButton.remove();
-  helpButton.remove();
-  playButton.remove();
+  viewButton.hide();
+  helpButton.hide();
+  playButton.hide();
 
   img.resize(img.width/img.height*height,height);
   image(img,0,0);
@@ -511,18 +549,18 @@ function closeScore(){
 function toggleMIDI(){
   if (isPlaying==0){
     if (playbackStarted==0){
-      MIDIjs.play(midiFile)
+      MIDIjs.play(midiFile);
     }
     else {
-      MIDIjs.resume(midiFile)
+      MIDIjs.resume(midiFile);
     }
     isPlaying=1;
     playbackStarted=1;
-    button.html("Pause")
+    playButton.html("Pause");
   }
   else if (isPlaying==1){
     MIDIjs.pause(midiFile);
-    button.html("Resume");
+    playButton.html("Resume");
     isPlaying=0;
   }
 }
