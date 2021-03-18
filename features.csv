@@ -1,60 +1,58 @@
-composer,title,date,avgNumVoices,keyTypes,sharpsOrFlats,tempo,timeSig,noteDensity,partList,strings,keys,woodwinds,percussion,voice,filename
-Adam de la Halle,Fi Maris de vostre Amour,None,3,minor,1,80,"[3, 4]",3.764705882,"['Voice', 'Voice', 'Voice']",0,0,0,0,1,fimaris
-"Alkan, Charles-Valentin","Fa, Op. 38, No. 2",None,2.879581152,minor,1,72,"[3, 8]",11.78181818,"['Piano', 'Piano', 'Piano']",0,1,0,0,0,02-fa_edited
-"Bach, Johann Sebastian",Movement 1: Allemande,None,1,minor,1,94,"[4, 4]",6.822580645,['Violin'],1,0,0,0,0,partita2-1
-"Bach, Carl Philipp Emanuel",La Gause,None,1.694444444,major,1,110,"[2, 4]",5.991071429,"['Piano', 'Piano']",0,1,0,0,0,Wq117-37_edited
-"Beethoven, Ludwig van",Piano Sonata no. 8 in C minor,None,1.56137931,major,4,40,"[2, 4]",5.465753425,"['Piano', 'Piano']",0,1,0,0,0,sonata08-2
-"Bononcini, Giovanni",For the love my heart doth prize,None,2.001897533,major,2,80,"[3, 4]",4.703108253,"['Voice', 'Piano', 'Piano']",0,1,0,0,1,perlagloria
-"Brahms, Johannes","Waltz in E Major, Op.39 No.2",None,0.419354839,major,4,172,"[3, 4]",6.652136752,"['Piano', 'Piano', 'Piano']",0,1,0,0,0,op39-02_edited
-"Buxtehude, Dietrich","Sonata in A Minor, Op. 1, No. 3",None,2.396226415,minor,0,72,"[4, 4]",3.785714286,"['Violin', 'Viola', 'Harpsichord']",1,1,0,0,0,op1-3-1
-"Byrd, William",Ave verum corpus,None,3.260273973,minor,0,120,"[4, 4]",5.041666667,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,aveverum
-"Chopin, Frederic",Scherzo in B-flat Minor,None,1.354289254,major,7,300,"[3, 4]",10.08959044,"['Piano', 'Piano']",0,1,0,0,0,scherzo2
-"Clementi, Muzio","Sonata No. 3 in C Major, Op. 36, Mvmt. 1",None,1.499194847,major,0,120,"[4, 4]",7.247058824,"['Piano', 'Piano']",0,1,0,0,0,sonatina-36-3-1
-"Dufay, Guillaume",O tres piteulx/Omnes amici,None,2.908309456,major,4,110,"[3, 4]",4.027011494,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,omnes_amici
-"Dunstable, John","Hymn ""Veni Creator"" for Whitsunday",None,2.630372493,major,1,120,"[3, 2]",3.87037037,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,veni
-"Faure, Gabriel","Apres un Reve, Op. 7, No. 1",None,1.183381089,minor,3,66,"[3, 4]",3.961538462,"['Voice', 'Piano', 'Piano']",0,1,0,0,1,apres
-"Flecha, Matheo",La bomba,None,3.096885813,major,1,120,"[4, 4]",6.066475174,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,bomba
-"Frescobaldi, Girolamo",No. 14: Canzon Terza a 2. Canto e Basso,None,2.68627451,major,0,120,"[4, 4]",3.884422111,"['Violin', 'Violoncello', 'Violoncello']",1,0,0,0,0,canzoni14
-"Gabrieli, Giovanni",O magnum mysterium,None,5.177514793,minor,2,132,"[4, 4]",8.671532847,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,mysterium_edited
-"Gabrieli, Andrea",Ne confide,None,5.286919831,minor,0,120,"[4, 4]",6.611940299,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,coppini23
-"Gibbons, Orlando",The Silver Swanne,None,4.492307692,major,1,160,"[4, 4]",11.04761905,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,silverswan
-"Giovannelli, Ruggero",Suauissime Iesu,None,4.251141553,minor,2,120,"[4, 4]",6.372881356,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,coppini15
-"Grieg, Edvard",In der Halle des Bergkonigs,None,1.56350365,minor,2,138,"[4, 4]",7.576857143,"[None, 'Piano']",0,1,0,0,0,op46-4_edited
-"Handel, George Frideric",Largo from Xerxes (Arranged),None,1.516908213,major,1,60,"[3, 4]",2.621794872,"['Piano', 'Piano']",0,1,0,0,0,largo
-"Haydn, Franz Joseph",Sonata No. 33 in C minor,None,1.508025682,minor,3,132,"[3, 4]",7.683076923,"['Piano', 'Piano']",0,1,0,0,0,sonata33-3_edited
-"Haydn, Johann Michael",Menuet 1,None,3.994318182,major,3,110,"[3, 4]",11.23765432,"['Oboe', 'Trumpet', 'Violin', 'Violin', 'Contrabass']",1,0,1,0,0,menuet1_edited
-"Hofmann, Heinrich",Rogue,None,1.421768707,major,1,120,"[2, 4]",6.746268657,"['Piano', 'Piano']",0,1,0,0,0,schelm
-"Hummel, Johann Nepomuk","Prelude in E-flat Minor, Op. 67, No. 14",None,0.827586207,minor,6,120,"[2, 2]",3.357142857,"['Piano', 'Piano']",0,1,0,0,0,prelude67-14
-"Isaac, Henrich","Innsbruck, ich muss dich lassen",None,3.83908046,major,1,120,"[2, 2]",5.52173913,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,innsbruck
-"Ives, Charles",Spring Song,None,1.5859375,major,1,92,"[3, 4]",5.852417303,"['Voice', 'Piano', 'Piano']",0,1,0,0,1,065-spring-song
-Josquin Desprez,The Cricket,None,3.527559055,major,0,220,"[2, 2]",9.802222222,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,grillo
-"Landini, Francesco",Ecco la primavera,None,2,minor,1,80,"[3, 4]",2.767295597,"['Voice', 'Voice']",0,0,0,0,1,echo
-"Lassus, Orlande de",Matona mia cara,None,3.770573566,major,1,156,"[2, 2]",7.077777778,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,matona_edited
-"Liszt, Franz","Ballade No. 2 in B Minor, S. 171",None,1.197276265,minor,2,144,"[6, 4]",6.149151046,"['Piano', 'Piano']",0,1,0,0,0,ballade2_edited
-"MacDowell, Edward",Dance of Fantasy,None,1.278895917,minor,4,152,"[2, 4]",10.59506857,"['Piano', 'Piano']",0,1,0,0,0,op14-5
-"Machaut, Guillaume de","With goodness, worth...",None,1.859649123,minor,2,120,"[6, 8]",2.791666667,"['Voice', 'Voice']",0,0,0,0,1,de_bonte_edited
-"Marenzio, Luca",Ergo ne vis abire,None,3.396551724,minor,1,120,"[4, 4]",3.642857143,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,coppini14
-"Mendelssohn, Felix",Sonata in B-flat minor for piano in one movement,None,1.136513158,minor,5,40,"[4, 4]",4.426742532,"['Piano', 'Piano']",0,1,0,0,0,sonata1823_edited
-"Monteverdi, Claudio",Laudate Dominum omnes gentes,None,4.7383821,major,1,80,"[4, 4]",6.9093702,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Violin', 'Violin', 'Viola', 'Harpsichord', 'Harpsichord']",1,1,0,0,1,laudate
-"Morley, Thomas",April is in My Mistress' Face,None,3.163636364,minor,2,120,"[2, 2]",4.473684211,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,april
-"Mozart, Wolfgang Amadeus",Sonatina in C-major,None,1.078947368,major,0,64,"[4, 4]",1.964021164,"['Piano', 'Piano']",0,1,0,0,0,viennese6-3
-"Mussorgsky, Modest",Promenade,None,0.453038674,major,2,120,"[5, 4]",4.561151079,"['Piano', 'Piano']",0,1,0,0,0,promenade_edited
-"Nanino, Giovanni Maria",Artifex mirus,None,3.851239669,minor,1,120,"[4, 4]",5.230769231,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,coppini19
-"Obrecht, Jacob",Parce Domine,None,3.073170732,minor,0,132,"[4, 4]",4.375555556,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,parce_domine
-"Pachelbel, Johann",Canon in D Major,None,4.015186916,major,2,60,"[4, 4]",9.933333333,"['Violin', 'Violin', 'Violin', 'Harpsichord', 'Harpsichord']",1,1,0,0,0,canon
-Petrus de Cruce,Motet: Aucun - Lonc tans - Aunnuntiantes,None,2.607260726,major,0,80,"[3, 4]",3.14638448,"['Voice', 'Voice', 'Voice']",0,0,0,0,1,annun
-"Picchi, Giovanni","Canzona 1, part A",None,2.914893617,minor,1,120,"[4, 4]",5.113207547,"['Violin', 'Violin', 'Harpsichord']",1,1,0,0,0,score1Aa
-"Prokofiev, Sergey",Visions fugitives,None,1.812080537,major,0,80,"[4, 4]",2.902777778,"['Piano', 'Piano', 'Piano']",0,1,0,0,0,visions22-2_edited
-"Ravel, Maurice",Sonatine pour le piano,None,1.347708895,major,3,60,"[2, 4]",6.560906516,"['Piano', 'Piano']",0,1,0,0,0,sonatine-1
-Rore,Sonno,None,3.46366782,minor,1,120,"[4, 2]",2.077956989,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,sonno_edited
-"Scarlatti, Domenico","Sonata in D Major, K.478, L.12",None,1.304294479,major,2,92,"[3, 4]",4.742222222,"['Harpsichord', 'Harpsichord']",0,1,0,0,0,L012K478
-"Schubert, Franz","String Quartet No. 10 in E-flat Major, Op. 125, No. 1",None,3.194690265,major,3,200,"[2, 2]",11.44542773,"['Violin', 'Violin', 'Viola', 'Violoncello']",1,0,0,0,0,quartet10-1
-"Schumann, Robert",The Happy Farmer Comes Home,None,1.375,major,1,120,"[4, 4]",5.95,"['Piano', 'Piano']",0,1,0,0,0,op68no10
-"Scriabin, Alexander","Etude, Op. 8, No. 2",None,1.825242718,minor,2,92,"[4, 4]",10.65961538,"['Piano', 'Piano']",0,1,0,0,0,etude8-02
-"Sinding, Christian",Fruhlingsrauschen,None,1.509127789,major,7,100,"[2, 4]",12.30414747,"['Piano', 'Piano']",0,1,0,0,0,spring
-"Sousa, John Phillip",Hands Across the Sea,None,0.801020408,major,2,160,"[2, 2]",4.920028309,"['Piano', 'Piano']",0,1,0,0,0,hands-sea
-"Susato, Tielman",Reihentaenze Branlen,None,4,major,0,160,"[4, 4]",9.083333333,"['Recorder', 'Recorder', 'Recorder', 'Recorder']",0,0,1,0,0,reihentaenze-07
-"Vaqueiras, Raimbaut de",Neither May Day...,None,0.959459459,major,0,144,"[6, 4]",2.195744681,"['Voice', None]",0,1,0,0,1,kalenda_maya
-"Vecchi, Orazio",Veni in hortum,None,5.015686275,minor,1,120,"[4, 4]",8.008064516,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,coppini22
-"Victoria, Thoma Luis de",Gloria,None,3.160098522,minor,0,120,"[4, 4]",5.879598662,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,1,missa-quarti-toni_gloria_edited
-"Webern, Anton von",Piano Variations,None,0.923076923,major,2,160,"[2, 4]",4.385185185,"['Piano', 'Piano']",0,1,0,0,0,variations-2_edited
+composer,title,date,minutes,key,keyType,sharpsOrFlats,max_p_accidentals,max_partRange,tempo,timeSig,compoundMeter,meterChanges,noteDensity,p_shortestDuration,avgNumVoices,nParts,partList,strings,keys,woodwinds,percussion,brass,voice,filename,midiFileName
+Adam de la Halle,Fi Maris de vostre Amour,None,0.23,e minor,minor,1,0.28,9,80.0,"[3, 4]",0,0,3.76,0.125,3.0,3,"['Voice', 'Voice', 'Voice']",0,0,0,0,0,1,adam_fimaris.krn,adam_fimaris.mid
+"Alkan, Charles-Valentin","Fa, Op. 38, No. 2",None,2.94,d minor,minor,1,0.26,36,72.0,"[3, 8]",0,0,11.78,0.001,2.88,3,"['Piano', 'Piano', 'Piano']",0,1,0,0,0,0,alkan_02-fa_edited.krn,alkan_02-fa_edited.mid
+"Bach, Johann Sebastian",Movement 1: Allemande,None,1.32,d minor,minor,1,0.2,30,94.0,"[4, 4]",0,0,6.82,0.13703703703703704,1.0,1,['Violin'],1,0,0,0,0,0,bach_partita2-1.krn,bach_partita2-1.mid
+"Bach, Carl Philipp Emanuel",La Gause,None,0.51,F major,major,1,0.22,26,110.00000000000001,"[2, 4]",0,0,5.99,0.042682926829268296,1.69,2,"['Piano', 'Piano']",0,1,0,0,0,0,bachcpe_Wq117-37_edited.krn,bachcpe_Wq117-37_edited.mid
+"Beethoven, Ludwig van",Piano Sonata no. 8 in C minor,None,3.65,A- major,major,4,0.73,45,40.0,"[2, 4]",0,0,5.47,0.03536977491961415,1.56,2,"['Piano', 'Piano']",0,1,0,0,0,0,beethoven_sonata08-2.krn,beethoven_sonata08-2.mid
+"Bononcini, Giovanni",For the love my heart doth prize,None,3.9,D major,major,2,0.28,29,80.0,"[3, 4]",0,0,4.7,0.01182033096926714,2.0,3,"['Voice', 'Piano', 'Piano']",0,1,0,0,0,1,bononcini_perlagloria.krn,bononcini_perlagloria.mid
+"Brahms, Johannes","Waltz in E Major, Op.39 No.2",None,0.46,E major,major,4,0.58,31,172.0,"[3, 4]",0,0,6.65,0.2222222222222222,0.42,3,"['Piano', 'Piano', 'Piano']",0,1,0,0,0,0,brahms_op39-02_edited.krn,brahms_op39-02_edited.mid
+"Buxtehude, Dietrich","Sonata in A Minor, Op. 1, No. 3",None,1.17,a minor,minor,0,0.14,24,72.0,"[4, 4]",0,0,3.79,0.042704626334519574,2.4,3,"['Violin', 'Viola', 'Harpsichord']",1,1,0,0,0,0,buxtehude_op1-3-1.krn,buxtehude_op1-3-1.mid
+"Byrd, William",Ave verum corpus,None,2.0,a minor,minor,0,0.1,19,120.0,"[4, 4]",0,0,5.04,0.007598784194528876,3.26,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,byrd_aveverum.krn,byrd_aveverum.mid
+"Chopin, Frederic",Scherzo in B-flat Minor,None,7.81,C# major,major,7,0.77,65,300.0,"[3, 4]",0,0,10.09,0.09689823122276339,1.35,2,"['Piano', 'Piano']",0,1,0,0,0,0,chopin_scherzo2.krn,chopin_scherzo2.mid
+"Clementi, Muzio","Sonata No. 3 in C Major, Op. 36, Mvmt. 1",None,2.13,C major,major,0,0.09,39,120.0,"[4, 4]",0,0,7.25,0.002466091245376079,1.5,2,"['Piano', 'Piano']",0,1,0,0,0,0,clementi_sonatina-36-3-1.krn,clementi_sonatina-36-3-1.mid
+"Dufay, Guillaume",O tres piteulx/Omnes amici,None,2.64,A- major,major,4,0.54,17,110.00000000000001,"[3, 4]",0,1,4.03,0.011799410029498525,2.91,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,dufay_omnes_amici.krn,dufay_omnes_amici.mid
+"Dunstable, John","Hymn ""Veni Creator"" for Whitsunday",None,4.5,G major,major,1,0.26,16,120.0,"[3, 2]",0,1,3.87,0.02464788732394366,2.63,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,dunstable_veni.krn,dunstable_veni.mid
+"Faure, Gabriel","Apres un Reve, Op. 7, No. 1",None,2.18,c minor,minor,3,0.45,27,66.0,"[3, 4]",0,0,3.96,0.014634146341463415,1.18,3,"['Voice', 'Piano', 'Piano']",0,1,0,0,0,1,faure_apres.krn,faure_apres.mid
+"Flecha, Matheo",La bomba,None,10.15,G major,major,1,0.27,19,120.0,"[4, 4]",0,1,6.07,0.07044854881266491,3.1,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,flecha_bomba.krn,flecha_bomba.mid
+"Frescobaldi, Girolamo",No. 14: Canzon Terza a 2. Canto e Basso,None,3.32,C major,major,0,0.1,22,120.0,"[4, 4]",0,1,3.88,0.002564102564102564,2.69,3,"['Violin', 'Violoncello', 'Violoncello']",1,0,0,0,0,0,frescobaldi_canzoni14.krn,frescobaldi_canzoni14.mid
+"Gabrieli, Giovanni",O magnum mysterium,None,2.08,g minor,minor,2,0.21,17,132.0,"[4, 4]",0,1,8.67,0.008710801393728223,5.18,8,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,gabrieli_mysterium_edited.krn,gabrieli_mysterium_edited.mid
+"Gabrieli, Andrea",Ne confide,None,2.23,a minor,minor,0,0.13,16,120.0,"[4, 4]",0,0,6.61,0.09229098805646037,5.29,7,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,gabrielia_coppini23.krn,gabrielia_coppini23.mid
+"Gibbons, Orlando",The Silver Swanne,None,0.53,F major,major,1,0.22,17,160.0,"[4, 4]",0,0,11.05,0.2752808988764045,4.49,5,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,gibbons_silverswan.krn,gibbons_silverswan.mid
+"Giovannelli, Ruggero",Suauissime Iesu,None,1.97,g minor,minor,2,0.29,16,120.0,"[4, 4]",0,0,6.37,0.16897856242118536,4.25,5,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,giovannelli_coppini15.krn,giovannelli_coppini15.mid
+"Grieg, Edvard",In der Halle des Bergkonigs,None,2.55,b minor,minor,2,0.61,52,138.0,"[4, 4]",0,0,7.58,0.0457516339869281,1.56,2,"[None, 'Piano']",0,1,0,0,0,0,grieg_op46-4_edited.krn,grieg_op46-4_edited.mid
+"Handel, George Frideric",Largo from Xerxes (Arranged),None,2.6,G major,major,1,0.19,23,60.0,"[3, 4]",0,0,2.62,0.046012269938650305,1.52,2,"['Piano', 'Piano']",0,1,0,0,0,0,handel_largo.krn,handel_largo.mid
+"Haydn, Franz Joseph",Sonata No. 33 in C minor,None,3.45,c minor,minor,3,0.47,59,132.0,"[3, 4]",0,0,7.68,0.00408997955010225,1.51,2,"['Piano', 'Piano']",0,1,0,0,0,0,haydn_sonata33-3_edited.krn,haydn_sonata33-3_edited.mid
+"Haydn, Johann Michael",Menuet 1,None,0.98,A major,major,3,0.37,34,110.00000000000001,"[3, 4]",0,0,11.24,0.04078549848942598,3.99,5,"['Oboe', 'Trumpet', 'Violin', 'Violin', 'Contrabass']",1,0,1,0,1,0,haydnm_menuet1_edited.krn,haydnm_menuet1_edited.mid
+"Hofmann, Heinrich",Rogue,None,0.52,F major,major,1,0.24,32,130.0,"[2, 4]",0,0,7.31,0.014563106796116505,1.42,2,"['Piano', 'Piano']",0,1,0,0,0,0,hofmann_schelm_edited.krn,hofmann_schelm_edited.mid
+"Hummel, Johann Nepomuk","Prelude in E-flat Minor, Op. 67, No. 14",None,0.23,e- minor,minor,6,1.0,25,120.0,"[2, 2]",0,0,3.36,0.1,0.83,2,"['Piano', 'Piano']",0,1,0,0,0,0,hummel_prelude67-14.krn,hummel_prelude67-14.mid
+"Isaac, Henrich","Innsbruck, ich muss dich lassen",None,0.77,F major,major,1,0.2,16,120.0,"[2, 2]",0,0,5.52,0.1328125,3.84,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,isaac_innsbruck.krn,isaac_innsbruck.mid
+"Ives, Charles",Spring Song,None,0.71,F major,major,1,0.23,35,92.0,"[3, 4]",0,1,5.85,0.11764705882352941,1.59,3,"['Voice', 'Piano', 'Piano']",0,1,0,0,0,1,ives_065-spring-song.krn,ives_065-spring-song.mid
+Josquin Desprez,The Cricket,None,0.68,C major,major,0,0.08,14,220.00000000000003,"[2, 2]",0,1,9.8,0.19607843137254902,3.53,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,josquin_grillo.krn,josquin_grillo.mid
+"Landini, Francesco",Ecco la primavera,None,0.68,d minor,minor,1,0.02,12,80.0,"[3, 4]",0,0,2.77,0.05454545454545454,2.0,2,"['Voice', 'Voice']",0,0,0,0,0,1,landini_echo.krn,landini_echo.mid
+"Lassus, Orlande de",Matona mia cara,None,3.0,F major,major,1,0.21,17,156.0,"[2, 2]",0,0,7.08,0.12703330751355538,3.77,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,lassus_matona_edited.krn,lassus_matona_edited.mid
+"Liszt, Franz","Ballade No. 2 in B Minor, S. 171",None,8.91,b minor,minor,2,0.71,75,144.0,"[6, 4]",1,1,6.15,0.007871064467766116,1.2,2,"['Piano', 'Piano']",0,1,0,0,0,0,liszt_ballade2_edited.krn,liszt_ballade2_edited.mid
+"MacDowell, Edward",Dance of Fantasy,None,4.03,c# minor,minor,4,0.61,56,152.0,"[2, 4]",0,1,10.6,0.09742554265522463,1.28,2,"['Piano', 'Piano']",0,1,0,0,0,0,macdowell_op14-5.krn,macdowell_op14-5.mid
+"Machaut, Guillaume de","With goodness, worth...",None,0.8,g minor,minor,2,0.25,14,120.0,"[6, 8]",1,0,2.79,0.34782608695652173,1.86,2,"['Voice', 'Voice']",0,0,0,0,0,1,machaut_de_bonte_edited.krn,machaut_de_bonte_edited.mid
+"Marenzio, Luca",Ergo ne vis abire,None,2.1,d minor,minor,1,0.19,17,120.0,"[4, 4]",0,0,3.64,0.05916030534351145,3.4,5,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,marenzio_coppini14.krn,marenzio_coppini14.mid
+"Mendelssohn, Felix",Sonata in B-flat minor for piano in one movement,None,5.88,b- minor,minor,5,0.64,44,40.0,"[4, 4]",0,1,4.43,0.0007830853563038371,1.14,2,"['Piano', 'Piano']",0,1,0,0,0,0,mendelssohn_sonata1823_edited.krn,mendelssohn_sonata1823_edited.mid
+"Monteverdi, Claudio",Laudate Dominum omnes gentes,None,5.42,G major,major,1,0.29,23,80.0,"[4, 4]",0,1,6.91,0.13193768257059396,4.74,11,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Violin', 'Violin', 'Viola', 'Harpsichord', 'Harpsichord']",1,1,0,0,0,1,monteverdi_laudate.krn,monteverdi_laudate.mid
+"Morley, Thomas",April is in My Mistress' Face,None,1.27,g minor,minor,2,0.29,15,120.0,"[2, 2]",0,0,4.47,0.1638418079096045,3.16,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,morley_april.krn,morley_april.mid
+"Mozart, Wolfgang Amadeus",Sonatina in C-major,None,1.0,C major,major,0,0.15,26,64.0,"[4, 4]",0,0,1.96,0.03076923076923077,1.08,2,"['Piano', 'Piano']",0,1,0,0,0,0,mozart_viennese6-3.krn,mozart_viennese6-3.mid
+"Mussorgsky, Modest",Promenade,None,1.16,B- major,major,2,0.33,33,120.0,"[5, 4]",0,1,4.56,0.4782608695652174,0.45,2,"['Piano', 'Piano']",0,1,0,0,0,0,mussorgsky_promenade_edited.krn,mussorgsky_promenade_edited.mid
+"Nanino, Giovanni Maria",Artifex mirus,None,2.17,d minor,minor,1,0.16,17,120.0,"[4, 4]",0,0,5.23,0.0028328611898017,3.85,5,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,nanino_coppini19.krn,nanino_coppini19.mid
+"Obrecht, Jacob",Parce Domine,None,1.36,a minor,minor,0,0.06,19,132.0,"[4, 4]",0,0,4.38,0.21025641025641026,3.07,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,obrecht_parce_domine.krn,obrecht_parce_domine.mid
+"Pachelbel, Johann",Canon in D Major,None,3.8,D major,major,2,0.29,31,60.0,"[4, 4]",0,0,9.93,0.18722139673105498,4.02,5,"['Violin', 'Violin', 'Violin', 'Harpsichord', 'Harpsichord']",1,1,0,0,0,0,pachelbel_canon.krn,pachelbel_canon.mid
+Petrus de Cruce,Motet: Aucun - Lonc tans - Aunnuntiantes,None,2.36,C major,major,0,0.04,14,80.0,"[3, 4]",0,0,3.15,0.014893617021276596,2.61,3,"['Voice', 'Voice', 'Voice']",0,0,0,0,0,1,petrus_annun.krn,petrus_annun.mid
+"Picchi, Giovanni","Canzona 1, part A",None,1.77,d minor,minor,1,0.09,15,120.0,"[4, 4]",0,0,5.11,0.12154696132596685,2.91,3,"['Violin', 'Violin', 'Harpsichord']",1,1,0,0,0,0,picchi_score1Aa.krn,picchi_score1Aa.mid
+"Prokofiev, Sergey",Visions fugitives,None,1.2,C major,major,0,0.47,38,80.0,"[4, 4]",0,0,2.9,0.03783783783783784,1.81,3,"['Piano', 'Piano', 'Piano']",0,1,0,0,0,0,prokofiev_visions22-2_edited.krn,prokofiev_visions22-2_edited.mid
+"Ravel, Maurice",Sonatine pour le piano,None,2.94,A major,major,3,0.63,57,60.0,"[2, 4]",0,0,6.56,0.0033821871476888386,1.35,2,"['Piano', 'Piano']",0,1,0,0,0,0,ravel_sonatine-1.krn,ravel_sonatine-1.mid
+Rore,Sonno,None,12.4,d minor,minor,1,0.22,17,60.0,"[4, 2]",0,1,1.04,0.01694915254237288,3.46,4,"['Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,rore_sonno_edited.krn,rore_sonno_edited.mid
+"Scarlatti, Domenico","Sonata in D Major, K.478, L.12",None,3.75,D major,major,2,0.32,42,92.0,"[3, 4]",0,0,4.74,0.02211874272409779,1.3,2,"['Harpsichord', 'Harpsichord']",0,1,0,0,0,0,scarlatti_L012K478.krn,scarlatti_L012K478.mid
+"Schubert, Franz","String Quartet No. 10 in E-flat Major, Op. 125, No. 1",None,5.1,E- major,major,3,0.68,34,200.0,"[2, 2]",0,0,11.45,0.004531294250920419,3.19,4,"['Violin', 'Violin', 'Viola', 'Violoncello']",1,0,0,0,0,0,schubert_quartet10-1.krn,schubert_quartet10-1.mid
+"Schumann, Robert",The Happy Farmer Comes Home,None,0.67,F major,major,1,0.16,20,120.0,"[4, 4]",0,0,5.95,0.7073170731707317,1.38,2,"['Piano', 'Piano']",0,1,0,0,0,0,schumann_op68no10.krn,schumann_op68no10.mid
+"Scriabin, Alexander","Etude, Op. 8, No. 2",None,1.13,b minor,minor,2,0.56,50,92.0,"[4, 4]",0,0,10.66,0.010385756676557863,1.83,2,"['Piano', 'Piano']",0,1,0,0,0,0,scriabin_etude8-02.krn,scriabin_etude8-02.mid
+"Sinding, Christian",Fruhlingsrauschen,None,2.18,C# major,major,7,0.71,55,100.0,"[2, 4]",0,0,12.3,0.6159947124917383,1.51,2,"['Piano', 'Piano']",0,1,0,0,0,0,sinding_spring.krn,sinding_spring.mid
+"Sousa, John Phillip",Hands Across the Sea,None,2.95,B- major,major,2,0.3,32,160.0,"[2, 2]",0,0,4.92,0.005405405405405406,0.8,2,"['Piano', 'Piano']",0,1,0,0,0,0,sousa_hands-sea.krn,sousa_hands-sea.mid
+"Susato, Tielman",Reihentaenze Branlen,None,0.2,C major,major,0,0.0,9,160.0,"[4, 4]",0,0,9.08,0.03669724770642202,4.0,4,"['Recorder', 'Recorder', 'Recorder', 'Recorder']",0,0,0,0,0,0,susato_reihentaenze-07.krn,susato_reihentaenze-07.mid
+"Vaqueiras, Raimbaut de",Neither May Day...,None,1.96,C major,major,0,0.08,19,144.0,"[6, 4]",1,0,2.2,0.16037735849056603,0.96,2,"['Voice', None]",0,1,0,0,0,1,vaqueiras_kalenda_maya.krn,vaqueiras_kalenda_maya.mid
+"Vecchi, Orazio",Veni in hortum,None,2.07,d minor,minor,1,0.17,21,120.0,"[4, 4]",0,0,8.01,0.1890303623898139,5.02,7,"['Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice', 'Voice']",0,0,0,0,0,1,vecchi_coppini22.krn,vecchi_coppini22.mid

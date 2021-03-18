@@ -37,6 +37,8 @@ var nscores;
 var img;
 var selectedFile;
 var randomize=1;
+var midiFile;
+var isPlaying=0;
 
 function preload(){
  //jsonurl='https://www.asdesigned.com/6310examples/proxy.php?url=https://raw.githubusercontent.com/LLight/classical-music-viz/main/features.json';
@@ -153,7 +155,8 @@ function draw(){
 
       if (i==0){
         img=scoreList[randomPiece];
-        selectedFile=fileList[randomPiece]
+        selectedFile=fileList[randomPiece];
+        midiFile='midi/'+ midiFileList[randomPiece];
         console.log('new center piece=',newCenterPiece,selectedFile);
       }
       setParameters(randomPiece);
@@ -185,8 +188,9 @@ function draw(){
         drawViz(randomPiece, x, y, outerHeightSmall, innerHeightSmall, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,4);
       }
     }
-    playButton = createButton('Listen');
+    playButton = createButton('Play MIDI');
     playButton.position(3*width/4, height/2+height/8);
+    playbutton.mousePressed(toggleMIDI);
     viewButton = createButton('Preview Score');
     viewButton.position(3*width/4, height/2-height/8);
    // viewButton.mousePressed(showScore());
@@ -347,6 +351,7 @@ function pieceData (featureData) {
     stringsList.push(featureData[i].strings);
     percussionList.push(featureData[i].percussion);
     fileList.push(featureData[i].filename);
+    midiFileList.push(featureData[i].)
   }
 }
 
@@ -500,4 +505,23 @@ function closeScore(){
   closeButton.remove();
   randomize=0;
   redraw();
+}
+
+function toggleMIDI(){
+  if (isPlaying==0){
+    if (playbackStarted==0){
+      MIDIjs.play(midiFile)
+    }
+    else {
+      MIDIjs.resume(midiFile)
+    }
+    isPlaying=1;
+    playbackStarted=1;
+    button.html("Pause")
+  }
+  else if (isPlaying==1){
+    MIDIjs.pause(midiFile);
+    button.html("Resume");
+    isPlaying=0;
+  }
 }
