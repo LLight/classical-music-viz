@@ -32,6 +32,7 @@ var woodwindsList=[];
 var stringsList=[];
 var percussionList=[];
 var fileList=[];
+var midiFileList=[];
 var scoreList=[];
 var nscores;
 var img;
