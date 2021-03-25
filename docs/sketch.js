@@ -23,7 +23,7 @@ var timeSigNumList=[];
 var composerList=[];
 var titleList=[];
 var nLinesList=[];
-var idList=[];
+var spotifyIDList=[];
 var tempoList=[];
 var randomNumList;
 var keysList=[];
@@ -34,6 +34,7 @@ var percussionList=[];
 var fileList=[];
 var midiFileList=[];
 var scoreList=[];
+var difficultyList=[];
 var nscores;
 var img;
 var selectedFile;
@@ -41,6 +42,13 @@ var randomize=1;
 var midiFile;
 var isPlaying=0;
 var playbackStarted=0;
+var imageFile;
+var closeScoreButton;
+var scoreClicked=0;
+var scoreOpen=0;
+var loc;
+var spotifyOpen=0;
+var imgtemp;
 
 function preload(){
  //jsonurl='https://www.asdesigned.com/6310examples/proxy.php?url=https://raw.githubusercontent.com/LLight/classical-music-viz/main/features.json';
@@ -52,12 +60,14 @@ function preload(){
   keyboard = loadImage('images/keys_solid.svg');
   drum = loadImage('images/drum_solid.svg');
   singer = loadImage('images/singer.svg');
-
+  families = loadImage('images/families.svg');
+  difficultyEx = loadImage('images/difficulty.png');
 }
 
 function setup() {
   //createCanvas(800, 800);
-  createCanvas(windowHeight, windowHeight);
+  myCanvas=createCanvas(windowHeight, windowHeight-80);
+  myCanvas.parent('myContainer');
   background(240);
   noLoop();
   rectMode(CENTER);
@@ -67,12 +77,41 @@ function setup() {
   helpButton.mouseOver(question);
 
   playButton = createButton('Play MIDI');
-  playButton.position(3*width/4, height/2+height/8);
+  playButton.position(3*width/4, height/2);
   playButton.mousePressed(toggleMIDI);
 
-  viewButton = createButton('Preview Score');
+  viewButton = createButton('Preview score');
   viewButton.position(3*width/4, height/2-height/8);
   viewButton.mousePressed(() => showScore());
+
+  openSpotifyButton=createButton('Listen on Spotify');
+  openSpotifyButton.position(3*width/4,height/2+height/8);
+  openSpotifyButton.mousePressed(openSpotify);
+
+  closeSpotifyButton=createButton("X");
+  closeSpotifyButton.position(myCanvas.width-closeSpotifyButton.height,myCanvas.height-closeSpotifyButton.height);
+  closeSpotifyButton.mousePressed(closeSpotify);
+
+  closeScoreButton=createButton('Close score');
+  closeScoreButton.position(width-closeScoreButton.width,closeScoreButton.height);
+  closeScoreButton.mousePressed(closeScore);
+
+  downloadButton = createButton('Download Score');
+  downloadButton.position(width-downloadButton.width,downloadButton.height*3);
+  downloadButton.mousePressed(downloadScore);
+  //closeButton = createButton('Close');
+  //closeButton.position(width/6,height/20);
+  //closeButton.mousePressed(closeScore);
+
+  playButton.hide();
+  viewButton.hide();
+  helpButton.hide();
+  openSpotifyButton.hide();
+  closeScoreButton.hide();
+  downloadButton.hide();
+  closeSpotifyButton.hide();
+  //downloadButton.hide();
+  //closeButton.hide();
 }
 
 function draw(){
@@ -87,20 +126,17 @@ function draw(){
 
   //intro page
   if (frameCount==1) {
-    //nscores=fileList.length;
     for (i=0; i < fileList.length; i++){
-    scoreList.push(loadImage('images/' + fileList[i].split(".")[0] + '.png'));
-    playButton.hide();
-    viewButton.hide();
+    scoreList.push('images/' + fileList[i].split(".")[0] + '.png');
   }
     print ('nscores=',nscores);
-    background(240);
+    background(255);
     textAlign(CENTER);
     textSize(textHeight+14);
-    text('Classical Music Visualizations',width/2,height/4);
+    text('Score Visualizations',width/2,height/4);
     textSize(textHeight+6);
-    textStyle(ITALIC);
-    text('Explore scores with pictures',width/2,3*height/4);
+    //textStyle(ITALIC);
+    text('A visual exploration tool for sheet music',width/2,3*height/4);
     textSize(textHeight);
     textStyle(NORMAL);
     text('Click anywhere to start',width/2,height-textHeight);
@@ -110,7 +146,7 @@ function draw(){
   //explain representations of mood through color palettes
   else if (frameCount==2) {
    push();
-   background(240);
+   background(255);
    textAlign(CENTER);
    textSize(textHeight);
    text('Click anywhere to continue',width/2,height-textHeight);
@@ -123,7 +159,7 @@ function draw(){
   //explain representations of time signature (shape) and note density (number of lines)
   else if (frameCount==3){
    push();
-   background(240);
+   background(255);
    textAlign(CENTER,CENTER);
    textSize(textHeight+6);
    text('Time Signature',width/2,height/8);
@@ -131,48 +167,65 @@ function draw(){
    textSize(textHeight);
    text('In 3 or 6',width/3, 3*height/8);
    text('In 2 or 4', 2*width/3, 3*height/8);
-   text('Fewer notes per measure',width/3,5*height/6,width/4,textHeight*3);
-   text('More notes per measure',2*width/3,5*height/6,width/4,textHeight*3);
-   text('Click anywhere to display random pieces',width/2,height-textHeight);
+   text('Fewer notes per second',width/3,5*height/6,width/4,textHeight*3);
+   text('More notes per second',2*width/3,5*height/6,width/4,textHeight*3);
+   text('Click anywhere to continue',width/2,height-textHeight);
    pop();
 
    intro3();
+  }
 
-   //playButton.hide();
+  else if (frameCount==4){
+      push();
+      textSize(textHeight+6);
+
+      image(families,width*.3,height*.1);
+      image(difficultyEx,width*.2,height*.6);
+      text('Instrument families',width*.5,height*.1);
+      text('Difficulty level',width*.5,height*.6);
+      textSize(textHeight);
+      text('Easy',width*.8,height*.7);
+      text('Hard',width*.8,height*.85);
+      pop();
+      text('Click anywhere to continue',width/2,height-textHeight);
   }
   //start the main part of the visualizations
   //display random pieces with one currently selected shown larger in the middle
   //other random pieces are smaller at the top and bottom of the screen
   else  {
-    background(240);
-    //helpButton = createButton('?');
-    //helpButton.position(10, 10);
-    //helpButton.mouseOver(question);
+    background(255);
 
-    //playButton = createButton('Play MIDI');
-    //playButton.position(3*width/4, height/2+height/8);
     playButton.show();
     viewButton.show();
+    helpButton.show();
+    openSpotifyButton.show();
 
     if (randomize==1){
       randomSort();
       isPlaying=0;
       playbackStarted=0;
       MIDIjs.stop();
+      scoreClicked=0;
+      if (scoreOpen==1){
+        img.remove();
+        scoreOpen=0;
+        closeScoreButton.hide();
+        downloadButton.hide();
+      }
+      if (spotifyOpen=1){
+        closeSpotify();
+      }
     }
 
-    outerHeightBig=width/3;
+    outerHeightBig=width/4;
     outerHeightSmall=width/6;
     innerHeightBig=outerHeightBig/2;
     innerHeightSmall=outerHeightSmall/2;
 
     for (let i=0; i<7; i++){
 
-      if (frameCount>4 && i==0){
+      if (frameCount>5 && i==0){
         randomPiece=newCenterPiece;
-        //midiFile=midiFileList[randomPiece];
-        //console.log('center piece=',randomPiece,fileList[randomPiece]);
-        //console.log(img);
         console.log('i=',i,'randomPiece=',randomPiece,fileList[randomPiece]);
       }
       else {
@@ -182,27 +235,36 @@ function draw(){
       }
 
       if (i==0){
-        img=scoreList[randomPiece];
+        imageFile=scoreList[randomPiece];
+        imgtemp=loadImage(imageFile);
+        console.log('image file=',imageFile);
         selectedFile=fileList[randomPiece];
         midiFile='midi/'+ midiFileList[randomPiece];
         console.log('new center piece=',newCenterPiece,selectedFile);
         console.log('MIDI file=',midiFile);
+        spotifyID=spotifyIDList[randomPiece];
+        loc = "https://open.spotify.com/embed/track/"+spotifyID;
+        console.log('SpotifyID=',spotifyID);
       }
+      if (scoreClicked==0){
+        img=createImg(imageFile,"Image of score");
+        img.hide();
+      }
+
       setParameters(randomPiece);
       if (i==0){
         x=width/2;
         y=height/2;
 
-        drawViz(randomPiece, x, y, outerHeightBig, innerHeightBig, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,6);
-       // pop();
+        drawViz(randomPiece, x, y, outerHeightBig, innerHeightBig, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,6,difficulty);
+
         push();
         textSize(textHeight);
         textAlign(CENTER,CENTER);
         rectMode(CENTER);
         fill(0);
-        text(composer, x-width/2, y-height/4, width/6, windowHeight/2);
-        textStyle(ITALIC);
-        text(title, x-width/2, y-height/8, width/7 , windowHeight/2);
+        text(composer+': \n "'+ title +'"',
+           x-width*.4, height/2, width/5, height/2);
         pop();
       }
       else{
@@ -214,7 +276,7 @@ function draw(){
           x=(i-3)/4*width;
           y=5*height/6;
         }
-        drawViz(randomPiece, x, y, outerHeightSmall, innerHeightSmall, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,4);
+        drawViz(randomPiece, x, y, outerHeightSmall, innerHeightSmall, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,4,difficulty);
       }
     }
 
@@ -245,7 +307,7 @@ function intro1(){
      // console.log('nLines='+nLines);
       let y=height/2;
       push();
-      drawViz(randomPiece, x, y, width/5, width/10, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,4);
+      drawViz(randomPiece, x, y, width/5, width/10, lineWeight, textHeight, colorPalette,strings,voice,percussion,woodwinds,keys,4,difficulty);
       pop();
     }
 }
@@ -264,6 +326,12 @@ function intro2(){
   text('Major',width-offset,height/2-5);
   text('Fast tempo',width/2,offset-5);
   text('Slow tempo',width/2,height-offset+15);
+  fill(100);
+  textStyle(ITALIC);
+  text('Happy/upbeat',3*width/4,height/4);
+  text('Calm/peaceful',3*width/4,3*height/4);
+  text('Angry/intense',width/4,height/4);
+  text('Sad/melancholy',width/4,3*height/4);
   pop();
   [majorSlowColors,minorSlowColors,majorFastColors, minorFastColors]=defineColors();
   noStroke();
@@ -355,12 +423,13 @@ function setParameters(randomPiece){
   colorPalette=setColors(randomPiece);
   composer=composerList[randomPiece];
   title=titleList[randomPiece];
-  id=idList[randomPiece];
+  //spotifyID=spotifyIDList[randomPiece];
   strings=stringsList[randomPiece];
   voice=voiceList[randomPiece];
   percussion=percussionList[randomPiece];
   woodwinds=woodwindsList[randomPiece];
   keys=keysList[randomPiece];
+  difficulty=difficultyList[randomPiece];
 }
 
 function randomSort(){
@@ -383,7 +452,7 @@ function pieceData (featureData) {
     composerList.push(featureData[i].composer);
     titleList.push(featureData[i].title);
     nLinesList.push(floor(featureData[i].noteDensity));
-    //idList.push(featureData[i].spotifyID);
+    spotifyIDList.push(featureData[i].spotifyID);
     keysList.push(featureData[i].keys);
     voiceList.push(featureData[i].voice);
     woodwindsList.push(featureData[i].woodwinds);
@@ -391,10 +460,11 @@ function pieceData (featureData) {
     percussionList.push(featureData[i].percussion);
     fileList.push(featureData[i].filename);
     midiFileList.push(featureData[i].midiFileName);
+    difficultyList.push(featureData[i].difficulty);
   }
 }
 
-function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textHeight,colorPalette,strings,voice,percussion,woodwinds,keys,shapeSize){
+function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textHeight,colorPalette,strings,voice,percussion,woodwinds,keys,shapeSize, difficulty){
 
   //outer shape
   push();
@@ -409,24 +479,24 @@ function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textH
   if (nLines>=9){
     nLines=9;
   }
-  lineSpacing=outerHeight/nLines;
+  lineSpacing=outerHeight/(nLines+1);
   //line spacing determined by noteDensity
   stroke(colorPalette[0]);
 
-  for (i=1; i<=nLines; i++){
+  for (i=1; i<=nLines+1; i++){
     h=i*lineSpacing;
     fill(colorPalette[0]);
     x=round(midX-outerHeight/2+i*lineSpacing-lineSpacing/2);
 
     if (timeSigNum==2 | timeSigNum==4){
-      for (j=1; j<=nLines; j++){
+      for (j=1; j<=nLines+1; j++){
         y=round(midY-outerHeight/2+j*lineSpacing-lineSpacing/2);
         rect(x,y,shapeSize,shapeSize);
       }
     }
 
     else if (timeSigNum==3 | timeSigNum==6 | timeSigNum==5){
-      for (j=1; j<=nLines; j++){
+      for (j=1; j<=nLines+1; j++){
         y=round(midY-outerHeight/2+j*lineSpacing-lineSpacing/2);
         triangle(x,y-shapeSize/2,
                  x-shapeSize/sqrt(3), y + shapeSize/sqrt(3),
@@ -455,6 +525,22 @@ function drawViz(randomPiece,midX,midY,outerHeight,innerHeight, lineWeight,textH
   }
   if (voice==1){
     image(singer, midX-0.4*innerHeight, midY-0.35*innerHeight, 0.4*innerHeight, 0.3*innerHeight);
+  }
+  pop();
+  //difficulty
+  circleSpacing=outerHeight/6;
+  circleD=circleSpacing/2;
+  padding=0;
+  push();
+  stroke(75);
+  for (i=1;i<=5;i++) {
+    if (i<=difficulty){
+      fill(75);
+    }
+    else{
+      fill(255);
+    }
+    circle(midX - outerHeight/2 + circleSpacing * i, midY+outerHeight/2 + circleD+padding,circleD);
   }
   pop();
 }
@@ -487,7 +573,7 @@ function setColors(i){
 
 // When the user clicks the mouse
 function mousePressed() {
-  if (frameCount<=3){
+  if (frameCount<=4){
     clear();
     redraw();
   }
@@ -514,36 +600,63 @@ function mousePressed() {
 
 function question(){
   textAlign(LEFT,CENTER);
-  text('Currently selected piece is in the center. Select a smaller icon to change the current selection.',width/2,20,3*width/4,textHeight*3);
+  textSize(textHeight-6);
+  text('Currently selected piece is the square in the center. Select a different square to change the current selection.',width/2,20,width*.8,textHeight*3);
 }
 
 function showScore(){
-  background(255);
+  scoreClicked+=1;   //number of times button clicked (to prevent multiple button instances)
+  scoreOpen=1;
   viewButton.hide();
-  helpButton.hide();
-  playButton.hide();
 
-  img.resize(img.width/img.height*height,height);
-  image(img,0,0);
-  saveButton = createButton('Save');
-  saveButton.position(width/20,height/20);
-  saveButton.mousePressed(saveScore);
-  closeButton = createButton('Close');
-  closeButton.position(width/6,height/20);
-  closeButton.mousePressed(closeScore);
+  //img=createImg(imageFile,"Image of score");
+  img.position(windowHeight,0);
+  img.size(windowWidth-windowHeight,(windowWidth-windowHeight)*img.height/img.width);
+  img.show();
+
+  //if (typeof closeButton =="undefined"){
+  if (scoreClicked==1) {
+    //closeButton = document.createElement("button");
+    //closeButton.innerHTML = "Close Score";
+    //myContainer.appendChild(closeButton);
+    //closeButton.addEventListener ("click", closeScore);
+    closeScoreButton.show();
+    downloadButton.show();
+  }
+
+//  downloadButton=document.createElement('BUTTON');
+//  downloadButton.innerHTML="Download Score";
+  //img.insertBefore(downloadButton);
+//  downloadButton.onclick("downloadScore");
+//  document.body.appendChild(downloadButton);
+
+  //document.getElementById('downloadButton').style.display="none";
+  //closeButton=document.createElement('BUTTON');
+  //closeButton.innerHTML="Close Score Preview";
+  //closeButton.onclick("closeScore");
+  //document.body.appendChild(closeButton);
+
 }
 
-function saveScore(){
+function downloadScore(){
   //img.save('score','png');
-  img.save(selectedFile,'png');
+  //img.save(selectedFile,'png');
+  imgtemp.save(imageFile.split("/")[1],'png');
 }
 
 function closeScore(){
   //redraw();
-  saveButton.remove();
-  closeButton.remove();
   randomize=0;
   redraw();
+//  downloadButton.remove();
+  //closeButton.remove();
+  closeScoreButton.hide();
+  downloadButton.hide();
+  //img.remove();
+  img.hide();
+  scoreOpen=0;
+  scoreClicked=0;
+  //id.hide();
 }
 
 function toggleMIDI(){
@@ -563,4 +676,28 @@ function toggleMIDI(){
     playButton.html("Resume");
     isPlaying=0;
   }
+}
+
+
+function openSpotify(){
+  if (spotifyOpen==0){
+    closeSpotifyButton.show();
+    iframe=document.createElement('iframe');
+    iframe.src=loc;
+    iframe.allow="encrypted-media";
+    iframe.width=myCanvas.width;
+    iframe.height="80";
+    myContainer.appendChild(iframe);
+    spotifyOpen=1;
+    //closeSpotifyButton.mousePressed(closeSpotify);
+  }
+}
+
+function closeSpotify(){
+  if (typeof iframe != "undefined") {
+     iframe.remove();
+  }
+  closeSpotifyButton.hide();
+  spotifyOpen=0;
+  redraw();
 }
