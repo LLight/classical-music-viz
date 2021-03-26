@@ -627,7 +627,7 @@ function downloadScore(){
 
 function closeScore(){
   randomize=0;
-  redraw();
+  //redraw();
   closeScoreButton.hide();
   downloadButton.hide();
   img.hide();
@@ -675,5 +675,5 @@ function closeSpotify(){
   }
   closeSpotifyButton.hide();
   spotifyOpen=0;
-  redraw();
+  //redraw();
 }
