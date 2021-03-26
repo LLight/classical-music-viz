@@ -179,8 +179,8 @@ function draw(){
       push();
       textSize(textHeight+6);
 
-      image(families,width*.3,height*.1);
-      image(difficultyEx,width*.2,height*.6);
+      image(families,width*.3,height*.1,width*.4,width*.4*families.height/families.width);
+      image(difficultyEx,width*.2,height*.6,width*.5,width*.5*difficultyEx.height/difficultyEx.width);
       text('Instrument families',width*.5,height*.1);
       text('Difficulty level',width*.5,height*.6);
       textSize(textHeight);
@@ -616,47 +616,23 @@ function showScore(){
 
   //if (typeof closeButton =="undefined"){
   if (scoreClicked==1) {
-    //closeButton = document.createElement("button");
-    //closeButton.innerHTML = "Close Score";
-    //myContainer.appendChild(closeButton);
-    //closeButton.addEventListener ("click", closeScore);
     closeScoreButton.show();
     downloadButton.show();
   }
-
-//  downloadButton=document.createElement('BUTTON');
-//  downloadButton.innerHTML="Download Score";
-  //img.insertBefore(downloadButton);
-//  downloadButton.onclick("downloadScore");
-//  document.body.appendChild(downloadButton);
-
-  //document.getElementById('downloadButton').style.display="none";
-  //closeButton=document.createElement('BUTTON');
-  //closeButton.innerHTML="Close Score Preview";
-  //closeButton.onclick("closeScore");
-  //document.body.appendChild(closeButton);
-
 }
 
 function downloadScore(){
-  //img.save('score','png');
-  //img.save(selectedFile,'png');
   imgtemp.save(imageFile.split("/")[1],'png');
 }
 
 function closeScore(){
-  //redraw();
   randomize=0;
   redraw();
-//  downloadButton.remove();
-  //closeButton.remove();
   closeScoreButton.hide();
   downloadButton.hide();
-  //img.remove();
   img.hide();
   scoreOpen=0;
   scoreClicked=0;
-  //id.hide();
 }
 
 function toggleMIDI(){
