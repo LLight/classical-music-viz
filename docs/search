@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+  <title>Score Visualizations</title>
+</head>
+
+<body>
+    <div id="search" class="w3-content">
+      <h1> Placeholder</h1>
+    </div>
+</body>
+</html>
