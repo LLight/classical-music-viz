@@ -8,6 +8,7 @@ var id;
 var midX;
 var midY;
 var newCenterPiece;
+var oldCenterPiece;
 var lineWeight=2;
 var textHeight;
 var outerHeightBig;
@@ -122,14 +123,13 @@ function draw(){
   pieceData(featureData);
 
   [majorSlowColors, minorSlowColors, majorFastColors, minorFastColors] = defineColors();
-
+  console.log('frame=',frameCount);
   //intro page
   if (frameCount==1) {
     for (i=0; i < fileList.length; i++){
     scoreList.push('images/' + fileList[i].split(".")[0] + '.png');
     }
   }
-
 
   //display random pieces with one currently selected shown larger in the middle
   //other random pieces are smaller at the top and bottom of the screen
@@ -139,6 +139,7 @@ function draw(){
     viewButton.show();
     openSpotifyButton.show();
 
+    //re-randomize the pieces shown, stop playback, close score and spotify player if open
     if (randomize==1){
       if (toggleRandom==1){
         randomSort();
@@ -169,7 +170,6 @@ function draw(){
     for (let i=0; i<7; i++){
 
       if (frameCount>1 && i==0){
-      //if (i==0){
         randomPiece=newCenterPiece;
         console.log('i=',i,'randomPiece=',randomPiece,fileList[randomPiece]);
       }
@@ -180,6 +180,7 @@ function draw(){
       }
 
       if (i==0){
+      //  randomPiece=randomNumList[i];
         imageFile=scoreList[randomPiece];
         imgtemp=loadImage(imageFile);
         console.log('image file=',imageFile);
@@ -241,6 +242,8 @@ function draw(){
     else{
       openSpotifyButton.html('Listen on Spotify');
     }
+
+    oldCenterPiece=newCenterPiece;
 }
 
 function setParameters(randomPiece){
@@ -260,14 +263,21 @@ function setParameters(randomPiece){
 }
 
 function randomSort(){
+  console.log('executed random sort');
   randomNumList=[];
   for (let i=0; i < nscores - 1; i++){
     randomNumList.push(i);
   }
   randomNumList.sort(() => Math.random()-0.5);
+  if (frameCount>1){
+    randomNumList[0]=newCenterPiece;
+  }
+  console.log('random num list from randomSort',randomNumList);
 }
 
 function sortSimilar(){
+  console.log('executed similar sort');
+  console.log('newCenterPiece at start of sort=',newCenterPiece);
   similarityList=[];
   for (let i=0; i<nscores-1; i++){
     similarity=0; //for each piece, calculate a similarity score between that piece and the current selection
@@ -307,24 +317,24 @@ function sortSimilar(){
   function getAllIndexes(arr, val) {       //get list of all indexes in array corresponding to a specific value
       var indexes = [], i;
       for(i = 0; i < arr.length; i++)
-          if (arr[i] === val)
+          if (arr[i] === val & i!=newCenterPiece)
               indexes.push(i);
       return indexes;
   }
-  sortedIndexList=[];  //get a list of indexes of pieces sorted by similarity score (best to worst match), initialize as index of current selection
+
+  //create  a list of indexes of pieces sorted by similarity score (best to worst match)
+ sortedIndexList=[];
   for (i=0; i<simDistinct.length; i++){
   		a=getAllIndexes(similarityList,simDistinct[i]);  //list of all indexes corresponding to a specific similarity score
       sortedIndexList.push(a);
   }
-  console.log('distinct values of similarity score',simDistinct);
 
-  randomNumList=sortedIndexList.flat(); //flatten multidimensional array
-    console.log('randomNumList',randomNumList);
+  randomNumList=[newCenterPiece].concat(sortedIndexList.flat());
+  //console.log('randomNumList at end of sortsimilar',randomNumList);
 }
 
 function pieceData (featureData) {
   for (let i=0; i< nscores - 1; i++){
-    //print(i);
     keyTypesList.push(featureData[i].keyType);
     tempoList.push(featureData[i].tempo);
     timeSigNumList.push(featureData[i].timeSig[0]);
@@ -476,13 +486,10 @@ function mousePressed() {
 function showScore(){
   scoreClicked+=1;   //number of times button clicked (to prevent multiple button instances)
   scoreOpen=1;
-  //viewButton.hide();
 
-  //img.position(windowHeight,0);
   imgX=canvasW+downloadButton.width;
   imgY=yoffset;
   img.position(imgX,imgY);
-  //imgW = windowWidth-windowHeight;
   imgW=(windowWidth-imgX)*.9;
   imgH = imgW * img.height / img.width;
   img.size(imgW, imgH);
@@ -501,7 +508,6 @@ function downloadScore(){
 
 function closeScore(){
   randomize=0;
-  //redraw();
   closeScoreButton.hide();
   downloadButton.hide();
   img.hide();
@@ -530,7 +536,7 @@ function toggleMIDI(){
 
 
 function openSpotify(){
-  print('spotifyID=',spotifyID);
+  console.log('spotifyID=',spotifyID);
   if (spotifyOpen==0 && spotifyID){
       openSpotifyButton.html('Listen on Spotify');
     closeSpotifyButton.show();
@@ -540,9 +546,7 @@ function openSpotify(){
     iframe.width=myCanvas.width;
     iframe.height="80";
 
-    //canvasContainer.appendChild(iframe);
     spotifyContainer.appendChild(iframe);
-    //iframe.parent('exploreContainer');
     spotifyOpen=1;
   }
 }
@@ -553,7 +557,6 @@ function closeSpotify(){
   }
   closeSpotifyButton.hide();
   spotifyOpen=0;
-  //redraw();
 }
 
 function selectEvent(){
@@ -566,6 +569,9 @@ function selectEvent(){
     toggleRandom=0;
     console.log('sort order=similar');
   }
+
+  console.log('randomNumList after changing selection=',randomNumList);
+  newCenterPiece=randomNumList[0];
   randomize=1;
   clear();
   redraw();
