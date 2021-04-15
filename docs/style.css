@@ -12,6 +12,11 @@ html, body {
   margin: auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h1 {
     color: black;
     text-align:center;
