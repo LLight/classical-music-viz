@@ -310,6 +310,10 @@ function sortSimilar(){
     if ( (tempoList[i]>=100 && tempoList[newCenterPiece]>=100) | (tempoList[i]<100 && tempoList[newCenterPiece]<100)){
       similarity+=1; //+1 if tempo is in same category
     }
+
+    if (keyTypesList[i] == keyTypesList[newCenterPiece]){
+      similarity+=1; //+1 if pieces are in the same mode;
+    }
     similarityList.push(similarity); //list of similarity scores for each piece
   }
   var simDistinct=[...new Set(similarityList)] //distinct values of similarity scores
